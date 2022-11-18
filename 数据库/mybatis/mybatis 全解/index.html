@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>使用案例 - koala</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">koala</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../README.en/" class="nav-link">koala</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Java <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Java/Effective%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" class="dropdown-item">Effective开发笔记</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/Java%E6%B5%81/" class="dropdown-item">Java流</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/Java%E7%BC%96%E7%A0%81/" class="dropdown-item">Java编码</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/LocalDateTime%E5%A4%84%E7%90%86/" class="dropdown-item">LocalDateTime处理</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/hutools/" class="dropdown-item">Hutools</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/%E5%8F%8D%E5%B0%84/" class="dropdown-item">反射</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">加密算法</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Java/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/%E5%85%A5%E9%97%A8/" class="dropdown-item">入门</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">多线程</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/ThreadLoacl/" class="dropdown-item">ThreadLoacl</a>
+</li>
+            
+<li>
+    <a href="../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/volatile/" class="dropdown-item">Volatile</a>
+</li>
+            
+<li>
+    <a href="../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-notion/" class="dropdown-item">并发编程 notion</a>
+</li>
+            
+<li>
+    <a href="../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" class="dropdown-item">并发编程</a>
+</li>
+            
+<li>
+    <a href="../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E8%8D%89%E7%A8%BF/" class="dropdown-item">草稿</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PC端 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../PC%E7%AB%AF/electron/" class="dropdown-item">Electron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Liunx <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../liunx/centos%E9%83%A8%E7%BD%B2k8s/" class="dropdown-item">Centos部署k8s</a>
+</li>
+                                    
+<li>
+    <a href="../../../liunx/jenkins/" class="dropdown-item">Jenkins</a>
+</li>
+                                    
+<li>
+    <a href="../../../liunx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="dropdown-item">常用命令</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Liunx</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../liunx/liunx/ubuntu%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%91%BD%E4%BB%A4/" class="dropdown-item">Ubuntu 服务器命令</a>
+</li>
+            
+<li>
+    <a href="../../../liunx/liunx/yum%20%E5%91%BD%E4%BB%A4/" class="dropdown-item">Yum 命令</a>
+</li>
+            
+<li>
+    <a href="../../../liunx/liunx/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" class="dropdown-item">持续集成</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../python/QT5/" class="dropdown-item">QT5</a>
+</li>
+                                    
+<li>
+    <a href="../../../python/numpy/" class="dropdown-item">Numpy</a>
+</li>
+                                    
+<li>
+    <a href="../../../python/turtle/" class="dropdown-item">Turtle</a>
+</li>
+                                    
+<li>
+    <a href="../../../python/%E6%95%A3%E4%B9%B1%E7%9F%A5%E8%AF%86/" class="dropdown-item">散乱知识</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Srping web <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../srping%20web/security/Oauth2%20%E5%9B%9B%E7%A7%8D%E6%8E%88%E6%9D%83%E6%A8%A1%E5%BC%8F/" class="dropdown-item">Oauth2 四种授权模式</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/security/spring%20security%20%E6%9E%B6%E6%9E%84%E7%90%86%E8%A7%A3/" class="dropdown-item">Spring security 架构理解</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/security/token%20%E7%B3%BB%E5%88%97%E7%9F%A5%E8%AF%86/" class="dropdown-item">Token 系列知识</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/security/%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/" class="dropdown-item">参考文档</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">开发问题详解</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../srping%20web/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/mybatis-plus/" class="dropdown-item">Mybatis plus</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/sql%E8%AF%AD%E5%8F%A5/" class="dropdown-item">Sql语句</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E4%BC%A0%E5%8F%82%E6%95%B0/" class="dropdown-item">传参数</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/" class="dropdown-item">切面编程</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%8F%82%E6%95%B0%E6%95%88%E9%AA%8C/" class="dropdown-item">参数效验</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%BC%80%E5%8F%91%E6%A6%82%E5%8F%99/" class="dropdown-item">开发概叙</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F/" class="dropdown-item">开发注意</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E6%95%88%E9%AA%8C/" class="dropdown-item">效验</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20web/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E8%A7%84%E8%8C%83%E9%97%AE%E9%A2%98/" class="dropdown-item">规范问题</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Es</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/es/es/" class="dropdown-item">Es</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Nacos</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/nacos/KubeSphere%20%E9%83%A8%E7%BD%B2%20nacos/" class="dropdown-item">KubeSphere 部署 nacos</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/nacos/nacos%E5%91%BD%E4%BB%A4/" class="dropdown-item">Nacos命令</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">消息队列</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RocketMQ%E5%85%A8%E6%99%AF%E5%9B%BE/" class="dropdown-item">RocketMQ全景图</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketMQ%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="dropdown-item">rocketMQ 官方文档阅读笔记</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketmq%20%E5%9F%BA%E6%9C%AC%E6%A0%B7%E4%BE%8B/" class="dropdown-item">Rocketmq 基本样例</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketmq%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%BD%BF%E7%94%A8/" class="dropdown-item">Rocketmq 控制台使用</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开源项目 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90/" class="dropdown-item">参与开源</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">微服务 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/K8S%20%E5%85%A5%E9%97%A8/" class="dropdown-item">K8S 入门</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/kubesphere/" class="dropdown-item">Kubesphere</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Docker</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/docker/docker%20%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" class="dropdown-item">Docker 命令大全</a>
+</li>
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/docker/docker%20%E6%A1%88%E4%BE%8B/" class="dropdown-item">Docker 案例</a>
+</li>
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/docker/spring-boot/" class="dropdown-item">Spring boot</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Spring cloud</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/spring-cloud%20%E5%AD%A6%E4%B9%A0/" class="dropdown-item">Spring cloud 学习</a>
+</li>
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/%E7%BD%91%E5%85%B3/" class="dropdown-item">网关</a>
+</li>
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/%E7%BD%91%E5%85%B3%E9%9B%86%E6%88%90Oauth2%E8%AF%A6%E8%A7%A3/" class="dropdown-item">网关集成Oauth2详解</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">数据库 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mybatis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">使用案例</a>
+</li>
+            
+<li>
+    <a href="../mybatis-plus/" class="dropdown-item">Mybatis plus</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mybatis plus</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mybatis-plus/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E8%AF%A6%E8%A7%A3/" class="dropdown-item">官方文档详解</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mysql</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mysql/mysql%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="dropdown-item">Mysql 常用命令</a>
+</li>
+            
+<li>
+    <a href="../../mysql/mysql-varchar%20%E8%AF%A6%E8%A7%A3/" class="dropdown-item">Mysql varchar 详解</a>
+</li>
+            
+<li>
+    <a href="../../mysql/mysql%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%B2%97%E8%AF%BB/" class="dropdown-item">Mysql官方文档粗读</a>
+</li>
+            
+<li>
+    <a href="../../mysql/mysql%E7%BC%96%E7%A8%8B/" class="dropdown-item">Mysql编程</a>
+</li>
+            
+<li>
+    <a href="../../mysql/mysql%E8%AF%A6%E8%A7%A3/" class="dropdown-item">Mysql详解</a>
+</li>
+            
+<li>
+    <a href="../../mysql/mysql%E9%97%AE%E9%A2%98%E5%A4%A7%E5%85%A8/" class="dropdown-item">Mysql问题大全</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mysql45讲</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mysql/mysql45%E8%AE%B2/Info/" class="dropdown-item">Info</a>
+</li>
+            
+<li>
+    <a href="../../mysql/mysql45%E8%AE%B2/%E6%97%A5%E5%BF%97/" class="dropdown-item">日志</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mysql45讲</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mysql45%E8%AE%B2/Info/" class="dropdown-item">Info</a>
+</li>
+            
+<li>
+    <a href="../../mysql45%E8%AE%B2/%E6%97%A5%E5%BF%97/" class="dropdown-item">日志</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Redis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../redis/redis%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%AC%94%E8%AE%B0/" class="dropdown-item">Redis 官方文档笔记</a>
+</li>
+            
+<li>
+    <a href="../../redis/%E5%8E%9F%E7%94%9F%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/" class="dropdown-item">原生分布式锁实现方式</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">学习mysql 45讲</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../%E5%AD%A6%E4%B9%A0mysql%2045%E8%AE%B2/%E8%8D%89%E7%A8%BF/" class="dropdown-item">草稿</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">设计模式 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/" class="dropdown-item">模板模式</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/" class="dropdown-item">观察者模式</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/" class="dropdown-item">责任链模式</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/%E7%BD%91%E5%85%B3%E9%9B%86%E6%88%90Oauth2%E8%AF%A6%E8%A7%A3/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../mybatis-plus/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">使用案例</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">参考文档</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_3" class="nav-link">对象模板</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">实体类</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#mybatis" class="nav-link">mybatis 细节</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#sql" class="nav-link">sql 不允许先过滤再联表</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#group-by" class="nav-link">group by</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">#{} ${} 区别</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mybatisusegeneratedkeyskeypropertykeycolumn" class="nav-link">Mybatis属性useGeneratedKeys,keyProperty,keyColumn的使用</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mybaties-localdatetime" class="nav-link">mybaties 时间字段设置LocalDateTime处理</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">返回值解析</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_7" class="nav-link">遇到的异常</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mybatismapperparam" class="nav-link">关于Mybatis的Mapper中多参数方法不使用@param注解报错的问题</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">使用案例</h1>
+<h2 id="_2">参考文档</h2>
+<p><a href="http://c.biancheng.net/mybatis/annotation.html">MyBatis注解（3种类型） (biancheng.net)</a></p>
+<h1 id="_3">对象模板</h1>
+<h2 id="_4">实体类</h2>
+<pre><code class="language-java">@Data
+@NoArgsConstructor
+@TableName(value = &quot;mybaties.goods&quot;)
+public class Goods implements Serializable {
+    @TableId(value = &quot;id&quot;, type = IdType.INPUT)
+    private Integer id;
+
+    @TableField(value = &quot;`name`&quot;)
+    private String name;
+
+    @TableField(value = &quot;brand&quot;)
+    private String brand;
+    // 
+    @JsonFormat(pattern = &quot;yyyy-MM-dd'T'HH:mm:ss.SSS&quot;, timezone = &quot;GMT+8&quot;)
+    // 前台向后台传日期的接收模型
+    @DateTimeFormat(pattern = &quot;yyyy-MM-dd'T'HH:mm:ss.SSS&quot;)
+    @TableField(value = &quot;gmt_time&quot;)
+    private LocalDateTime gmtTime;
+            @TableLogic
+    private Integer isDeleted;
+    private static final long serialVersionUID = 1L;
+}
+</code></pre>
+<h1 id="mybatis">mybatis 细节</h1>
+<h2 id="sql">sql 不允许先过滤再联表</h2>
+<p>过滤on  后面 and过滤只能过滤副表</p>
+<h2 id="group-by">group by</h2>
+<p>和  max min  group_concat 使用<br />
+一对多的情况没有group by就会出现重复数据</p>
+<h2 id="_5">#{} ${} 区别</h2>
+<p>1、#{}
+解析为一个JDBC预编译语句（prepared statement）的参数标记符，把参数部分用占位符？代替。动态解析为：
+select * from t_user where username = ？ ;而传入的参数将会经过PreparedStatement方法的强制类型检查和安全检查等处理，最后作为一个合法的字符串传入。
+2、${}
+这种方式只会做简单的字符串替换，在动态SQL解析阶段将会进行变量替换，假如传递的参数为Alice，最终处理结果如下：select * from t_user where username = 'Alice' ;
+这样在预编译之前的sql语句已经不包含变量了，因此可以看出\${} 变量的替换阶段是在动态SQL解析阶段。</p>
+<blockquote>
+<p>表名  行名用 ${}</p>
+</blockquote>
+<h2 id="mybatisusegeneratedkeyskeypropertykeycolumn">Mybatis属性useGeneratedKeys,keyProperty,keyColumn的使用</h2>
+<p>https://blog.csdn.net/csxypr/article/details/97522028</p>
+<blockquote>
+<p>在使用keyProperty的时候，发现竟然还有个类似的属性：keyColumn，那么他是干什么用的呢?
+keyColumn用于指定数据库table中的主键
+也就是说这是三个属性同时使用时，则可以使用数据库中自增长的主键，并且可以将主键的值返回给keyProperty中写好的字段</p>
+</blockquote>
+<h2 id="mybaties-localdatetime">mybaties 时间字段设置LocalDateTime处理</h2>
+<p><a href="https://mybatis.org/mybatis-3/zh/configuration.html#typeHandlers">类型处理器（typeHandlers）</a></p>
+<pre><code class="language-java">&lt;result column=&quot;gmt_time&quot; jdbcType=&quot;TIMESTAMP&quot; property=&quot;gmtTime&quot; typeHandler=&quot;org.apache.ibatis.type.LocalDateTimeTypeHandler&quot; javaType=&quot;java.time.LocalDateTime&quot;/&gt;
+</code></pre>
+<blockquote>
+<p>java中的实体类用到了LocalDateTime 类型。
+在转换时候报错
+Error attempting to get column ‘XXX’ from result set. Cause: java.sql.</p>
+<p>解决方法最为简单。
+是因为com.alibaba 的版本问题。</p>
+<p>切换版本号到1.1.22 即可消除问题</p>
+<p>com.alibaba druid-spring-boot-starter 1.1.22</p>
+<p>在Entity实体类内java8特性的LocalDateTime要求mysql-connector-java版本不能低于5.1.37</p>
+</blockquote>
+<h2 id="_6">返回值解析</h2>
+<p>https://www.cnblogs.com/szrs/p/15257883.html</p>
+<pre><code class="language-java">@Override
+    public PageInfo getSyncstatusPages(Syncstatus vo, int pageNo, int pageSize) {
+        PageHelper.startPage(pageNo, pageSize);
+
+
+       /* //查看增删改查的返回值
+        //1新增：返回值自己定义，可以是void，int
+        //1-1新增一条数据:插入成功,返回值为1
+        int insert_success1 = yylfHttpServletMapper.insert(&quot;8&quot;, &quot;2&quot;, &quot;1&quot;);
+        //1-2新增多条数据:插入成功，返回值为插入的数据条数，当有一条数据错误时，所有数据都会插入失败
+        int insert_success2 = yylfHttpServletMapper.insert_duotiao(&quot;7&quot;);
+        String insert_success3 = yylfHttpServletMapper.insert_duotiao_String(&quot;7&quot;);//不支持返回值为String类型
+        //1-3新增一条数据:插入失败：主键冲突，会直接报异常
+        int insert_failed = yylfHttpServletMapper.insert(&quot;1&quot;, &quot;2&quot;, &quot;1&quot;);
+        //1-4插入null：属性为null，如果表中所有字段允许为null，插入一条所有值均为null的数据
+        Syncstatus syncstatus1 = null;
+        yylfHttpServletMapper.insertSyncstatus(syncstatus1);
+        //1-5插入一个没有赋值的对象：属性为null，如果表中所有字段允许为null，插入一条所有值均为null的数据
+        Syncstatus syncstatus2 = new Syncstatus();
+        yylfHttpServletMapper.insertSyncstatus(syncstatus2);*/
+
+
+        /*//2删除:返回值自己定义，可以是void，int
+        //2-1删除成功：没有数据:返回值为0
+        int delete_success1 = yylfHttpServletMapper.delete(&quot;0&quot;);
+        //2-2删除成功：有多条数据：返回值为删除的数据条数
+        int delete_success2 = yylfHttpServletMapper.delete_systemcode(&quot;2&quot;);
+        //2-3删除失败：例如有外键:报异常
+        int delete_fail = yylfHttpServletMapper.delete(&quot;1&quot;);*/
+
+        //3更新:返回值自己定义，可以是void，int
+        //3-1更新成功：没有数据，返回值为0
+        int update_no = yylfHttpServletMapper.update_no(&quot;0&quot;);
+        //3-2更新成功：有多条数据，返回更新的数据条数
+        int update_duotiao = yylfHttpServletMapper.update_duotiao_systemcode(&quot;2&quot;);
+        //3-3更新失败：例如有外键，报异常
+        //int update_fail = yylfHttpServletMapper.update_fail(&quot;1&quot;);
+
+        //4查询
+        //4-1 没数:String 类型返回null
+        Object object = yylfHttpServletMapper.select(&quot;0&quot;);
+        //4-1 没数:集合 类型返回[]空集合
+        Syncstatus syncstatus3 = new Syncstatus();
+        syncstatus3.setStatus(&quot;7&quot;);
+        List&lt;Syncstatus&gt; page0 = yylfHttpServletMapper.getSyncstatusList(syncstatus3);
+        //4-1 没数:int 类型返回null,如果定义为int会报错。因为没数时返回null，可以将返回类型改为String
+        String i = yylfHttpServletMapper.select_int(0);
+        //4-1：当返回值为对象时，若返回值为空，则返回null
+        //4-2 有数
+        List&lt;Syncstatus&gt; pages = yylfHttpServletMapper.getSyncstatusList(vo);
+        return new PageInfo&lt;Syncstatus&gt;(pages);
+    }
+</code></pre>
+<h1 id="_7">遇到的异常</h1>
+<h2 id="mybatismapperparam">关于Mybatis的Mapper中多参数方法不使用@param注解报错的问题</h2>
+<p>https://blog.csdn.net/u011821334/article/details/101763001</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
