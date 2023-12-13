@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>计算机网络基础 - koala</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">koala</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../log/" class="nav-link">Log</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Java <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Java/Java%E6%B5%81/" class="dropdown-item">Java流</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/Java%E7%BC%96%E7%A0%81/" class="dropdown-item">Java编码</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/LocalDateTime%E5%A4%84%E7%90%86/" class="dropdown-item">LocalDateTime处理</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/" class="dropdown-item">参考文档</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">加密算法</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Java/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/%E5%85%A5%E9%97%A8/" class="dropdown-item">入门</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">多线程</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-notion/" class="dropdown-item">并发编程 notion</a>
+</li>
+            
+<li>
+    <a href="../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" class="dropdown-item">并发编程</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PC端 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../PC%E7%AB%AF/electron/" class="dropdown-item">Electron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Android <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../android%20%E4%BB%BB%E5%8A%A1%E5%AE%8C%E6%88%90%E5%BA%A6/" class="dropdown-item">Android 任务完成度</a>
+</li>
+                                    
+<li>
+    <a href="../../%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/" class="dropdown-item">代码模板</a>
+</li>
+                                    
+<li>
+    <a href="../../%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/" class="dropdown-item">参考文档</a>
+</li>
+                                    
+<li>
+    <a href="../../%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/" class="dropdown-item">学习计划</a>
+</li>
+                                    
+<li>
+    <a href="../../%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="dropdown-item">学习记录</a>
+</li>
+                                    
+<li>
+    <a href="../../%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E5%AD%A6%E4%B9%A0/" class="dropdown-item">项目实战学习</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android 系列博客</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Android%20%E7%B3%BB%E5%88%97%E5%8D%9A%E5%AE%A2/Android%20Service/" class="dropdown-item">Android Service</a>
+</li>
+            
+<li>
+    <a href="../../Android%20%E7%B3%BB%E5%88%97%E5%8D%9A%E5%AE%A2/Android%20fragment/" class="dropdown-item">Android fragment</a>
+</li>
+            
+<li>
+    <a href="../../Android%20%E7%B3%BB%E5%88%97%E5%8D%9A%E5%AE%A2/Android%20%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/" class="dropdown-item">Android 事件分发机制</a>
+</li>
+            
+<li>
+    <a href="../../Android%20%E7%B3%BB%E5%88%97%E5%8D%9A%E5%AE%A2/%E5%AE%89%E5%8D%93%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/" class="dropdown-item">安卓线程模型</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android Notes</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Android%E5%BC%80%E6%BA%90%E5%BA%93%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" class="dropdown-item">Android开源库源码分析</a>
+</li>
+            
+<li>
+    <a href="../Android%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86%E7%82%B9/" class="dropdown-item">Android扩展知识点</a>
+</li>
+            
+<li>
+    <a href="../Android%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Android知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../C%2B%2B%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">C++知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../Framework%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Framework知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../Gradle%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">依赖项配置</a>
+</li>
+            
+<li>
+    <a href="../Java%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Java知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../Kotlin%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Kotlin知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E9%A2%98%E6%B1%87%E6%80%BB/" class="dropdown-item">常见面试算法题汇总</a>
+</li>
+            
+<li>
+    <a href="../%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">性能优化知识点汇总</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">计算机网络基础</a>
+</li>
+            
+<li>
+    <a href="../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%B1%87%E6%80%BB/" class="dropdown-item">设计模式汇总</a>
+</li>
+            
+<li>
+    <a href="../%E9%9F%B3%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">音视频知识点汇总</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android framework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../android%20framework/%E5%AD%A6%E4%B9%A0%E5%87%86%E5%88%99/" class="dropdown-item">学习准则</a>
+</li>
+            
+<li>
+    <a href="../../android%20framework/%E6%9D%82%E4%B9%B1%E7%AC%94%E8%AE%B0/" class="dropdown-item">杂乱笔记</a>
+</li>
+            
+<li>
+    <a href="../../android%20framework/%E6%9E%B6%E6%9E%84/" class="dropdown-item">架构</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Liunx <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../liunx/git%20%E5%91%BD%E4%BB%A4/" class="dropdown-item">Git 命令</a>
+</li>
+                                    
+<li>
+    <a href="../../../liunx/jenkins/" class="dropdown-item">Jenkins</a>
+</li>
+                                    
+<li>
+    <a href="../../../liunx/yum%20%E5%91%BD%E4%BB%A4/" class="dropdown-item">Yum 命令</a>
+</li>
+                                    
+<li>
+    <a href="../../../liunx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="dropdown-item">常用命令</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../python/QT5/" class="dropdown-item">QT5</a>
+</li>
+                                    
+<li>
+    <a href="../../../python/numpy/" class="dropdown-item">Numpy</a>
+</li>
+                                    
+<li>
+    <a href="../../../python/turtle/" class="dropdown-item">Turtle</a>
+</li>
+                                    
+<li>
+    <a href="../../../python/%E6%95%A3%E4%B9%B1%E7%9F%A5%E8%AF%86/" class="dropdown-item">散乱知识</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Socket <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../socket/socket%20%E8%8D%89%E7%A8%BF/" class="dropdown-item">Socket 草稿</a>
+</li>
+                                    
+<li>
+    <a href="../../../socket/socket%20%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5%E6%91%98%E8%A6%81/" class="dropdown-item">Socket 重要概念摘要</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Srping 系列 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/Oauth2%20%E5%9B%9B%E7%A7%8D%E6%8E%88%E6%9D%83%E6%A8%A1%E5%BC%8F/" class="dropdown-item">Oauth2 四种授权模式</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/Q%26A/" class="dropdown-item">Q&A</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/demo%20%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E5%AD%A6%E4%B9%A0/" class="dropdown-item">Demo 项目搭建学习</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/token%20%E7%B3%BB%E5%88%97%E7%9F%A5%E8%AF%86/" class="dropdown-item">Token 系列知识</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/" class="dropdown-item">参考文档</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/%E6%8E%88%E6%9D%83%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="dropdown-item">授权服务器配置</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">详解</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/%E8%AF%A6%E8%A7%A3/TokenStore/" class="dropdown-item">TokenStore</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">开发问题详解</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/mybatis-plus/" class="dropdown-item">Mybatis plus</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/sql%E8%AF%AD%E5%8F%A5/" class="dropdown-item">Sql语句</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E4%BC%A0%E5%8F%82%E6%95%B0/" class="dropdown-item">传参数</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/" class="dropdown-item">切面编程</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%8F%82%E6%95%B0%E6%95%88%E9%AA%8C/" class="dropdown-item">参数效验</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%BC%80%E5%8F%91%E6%A6%82%E5%8F%99/" class="dropdown-item">开发概叙</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F/" class="dropdown-item">开发注意</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E6%95%88%E9%AA%8C/" class="dropdown-item">效验</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E8%A7%84%E8%8C%83%E9%97%AE%E9%A2%98/" class="dropdown-item">规范问题</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Es</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/es/ElasticSearch%207.14/" class="dropdown-item">ElasticSearch 7.14-分布式搜索引擎</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/es/es/" class="dropdown-item">Es</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Nacos</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/nacos/KubeSphere%20%E9%83%A8%E7%BD%B2%20nacos/" class="dropdown-item">KubeSphere 部署 nacos</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/nacos/nacos%E5%91%BD%E4%BB%A4/" class="dropdown-item">Nacos命令</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">消息队列</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RocketMQ%E5%85%A8%E6%99%AF%E5%9B%BE/" class="dropdown-item">RocketMQ全景图</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketMQ%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="dropdown-item">rocketMQ 官方文档阅读笔记</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketmq%20%E5%9F%BA%E6%9C%AC%E6%A0%B7%E4%BE%8B/" class="dropdown-item">Rocketmq 基本样例</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketmq%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%BD%BF%E7%94%A8/" class="dropdown-item">Rocketmq 控制台使用</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">云原生 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubemetes%E5%91%BD%E4%BB%A4/" class="dropdown-item">Kubemetes命令</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubesphere/" class="dropdown-item">Kubesphere</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DevOps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/DevOps/DevOps/" class="dropdown-item">DevOps</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Docker</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker%20%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" class="dropdown-item">Docker 命令大全</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker%20%E6%A1%88%E4%BE%8B/" class="dropdown-item">Docker 案例</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/k8s%E5%91%BD%E4%BB%A4/" class="dropdown-item">K8s命令</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/%E9%97%AE%E9%A2%98/" class="dropdown-item">问题</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发常见问题 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/mybatis%20%E7%BC%96%E5%86%99/" class="dropdown-item">Mybatis 编写</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%AE%9E%E4%BD%93%E7%B1%BB/" class="dropdown-item">实体类</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9A%E4%B9%89/" class="dropdown-item">数据库定义</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">解决方案</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E9%99%90%E5%88%B6%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%A7%E5%B0%8F/" class="dropdown-item">限制文件上传大小</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开源项目 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90/" class="dropdown-item">参与开源</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">微服务 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/K8S%20%E5%85%A5%E9%97%A8/" class="dropdown-item">K8S 入门</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/NACOS%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="dropdown-item">NACOS 基础知识</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Spring cloud</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/spring-cloud%20%E5%AD%A6%E4%B9%A0/" class="dropdown-item">Spring cloud 学习</a>
+</li>
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/%E7%BD%91%E5%85%B3/" class="dropdown-item">网关</a>
+</li>
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/%E7%BD%91%E5%85%B3%E9%9B%86%E6%88%90Oauth2%E8%AF%A6%E8%A7%A3/" class="dropdown-item">网关集成Oauth2详解</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">数据库 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mybatis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mybatis/mybatis%20%E5%85%A8%E8%A7%A3/" class="dropdown-item">使用案例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mybatis plus</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mybatis-plus/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E8%AF%A6%E8%A7%A3/" class="dropdown-item">官方文档详解</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mysql</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="dropdown-item">Mysql 常用命令</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%20%E7%B4%A2%E5%BC%95%E7%AF%87/" class="dropdown-item">Mysql 索引篇</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%B2%97%E8%AF%BB/" class="dropdown-item">Mysql官方文档粗读</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E7%BC%96%E7%A8%8B/" class="dropdown-item">Mysql编程</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E8%AF%A6%E8%A7%A3/" class="dropdown-item">Mysql详解</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E9%97%AE%E9%A2%98%E5%A4%A7%E5%85%A8/" class="dropdown-item">Mysql问题大全</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/readme/" class="dropdown-item">Readme</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mysql45讲</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql45%E8%AE%B2/Info/" class="dropdown-item">Info</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql45%E8%AE%B2/%E6%97%A5%E5%BF%97/" class="dropdown-item">日志</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Redis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%20%E5%9F%BA%E7%A1%80%E6%96%87%E6%A1%A3/" class="dropdown-item">Redis 基础文档</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%AC%94%E8%AE%B0/" class="dropdown-item">Redis 官方文档笔记</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/%E5%8E%9F%E7%94%9F%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/" class="dropdown-item">原生分布式锁实现方式</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="dropdown-item">常见问题</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">社招面试 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E7%A4%BE%E6%8B%9B%E9%9D%A2%E8%AF%95/%E5%8F%82%E8%80%83/" class="dropdown-item">参考</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E7%A4%BE%E6%8B%9B%E9%9D%A2%E8%AF%95/%E6%9D%82%E9%A1%B9/" class="dropdown-item">杂项</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E7%A4%BE%E6%8B%9B%E9%9D%A2%E8%AF%95/%E9%A9%AC%E5%A3%AB%E5%85%B5%E9%9D%A2%E8%AF%95%E8%A7%86%E9%A2%912023/" class="dropdown-item">马士兵面试视频2023</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">设计模式 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/" class="dropdown-item">模板模式</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/" class="dropdown-item">观察者模式</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%B1%87%E6%80%BB/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">网络体系的分层结构</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#http" class="nav-link">HTTP 相关</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">通用头部</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">请求报文</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_8" class="nav-link">响应报文</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">缓存机制</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#http-11" class="nav-link">HTTP 1.1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#http-20" class="nav-link">HTTP 2.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#https" class="nav-link">HTTPS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#tcpip" class="nav-link">TCP/IP</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">三次握手</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_14" class="nav-link">四次挥手</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tcp-udp" class="nav-link">TCP 与 UDP 的区别</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#socket" class="nav-link">Socket</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_15" class="nav-link">使用示例</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<ul>
+<li><a href="#%e7%bd%91%e7%bb%9c%e4%bd%93%e7%b3%bb%e7%9a%84%e5%88%86%e5%b1%82%e7%bb%93%e6%9e%84">网络体系的分层结构</a></li>
+<li><a href="#http-%e7%9b%b8%e5%85%b3">HTTP 相关</a></li>
+<li><a href="#%e9%80%9a%e7%94%a8%e5%a4%b4%e9%83%a8">通用头部</a></li>
+<li><a href="#%e8%af%b7%e6%b1%82%e6%8a%a5%e6%96%87">请求报文</a><ul>
+<li><a href="#%e8%af%b7%e6%b1%82%e8%a1%8c">请求行</a></li>
+<li><a href="#%e8%af%b7%e6%b1%82%e6%96%b9%e6%b3%95">请求方法</a></li>
+<li><a href="#%e8%af%b7%e6%b1%82%e5%a4%b4">请求头</a></li>
+<li><a href="#%e8%af%b7%e6%b1%82%e4%bd%93">请求体</a></li>
+</ul>
+</li>
+<li><a href="#%e5%93%8d%e5%ba%94%e6%8a%a5%e6%96%87">响应报文</a><ul>
+<li><a href="#%e5%b8%b8%e8%a7%81%e7%8a%b6%e6%80%81%e7%a0%81">常见状态码</a></li>
+<li><a href="#%e5%93%8d%e5%ba%94%e5%a4%b4">响应头</a></li>
+</ul>
+</li>
+<li><a href="#%e7%bc%93%e5%ad%98%e6%9c%ba%e5%88%b6">缓存机制</a></li>
+<li><a href="#http-11">HTTP 1.1</a></li>
+<li><a href="#http-20">HTTP 2.0</a></li>
+<li><a href="#https">HTTPS</a><ul>
+<li><a href="#%e5%8a%a0%e5%af%86%e5%8e%9f%e7%90%86">加密原理</a></li>
+</ul>
+</li>
+<li><a href="#tcpip">TCP/IP</a></li>
+<li><a href="#%e4%b8%89%e6%ac%a1%e6%8f%a1%e6%89%8b">三次握手</a></li>
+<li><a href="#%e5%9b%9b%e6%ac%a1%e6%8c%a5%e6%89%8b">四次挥手</a></li>
+<li><a href="#tcp-%e4%b8%8e-udp-%e7%9a%84%e5%8c%ba%e5%88%ab">TCP 与 UDP 的区别</a></li>
+<li><a href="#socket">Socket</a></li>
+<li><a href="#%e4%bd%bf%e7%94%a8%e7%a4%ba%e4%be%8b">使用示例</a></li>
+</ul>
+<h1 id="_1">网络体系的分层结构</h1>
+<table>
+<thead>
+<tr>
+<th>分层</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>应用层（HTTP、FTP、DNS、SMTP 等）</td>
+<td>定义了如何包装和解析数据，应用层是 http 协议的话，则会按照协议规定包装数据，如按照请求行、请求头、请求体包装，包装好数据后将数据传至运输层</td>
+</tr>
+<tr>
+<td>运输层（TCP、UDP 等）</td>
+<td>运输层有 TCP 和 UDP 两种，分别对应可靠和不可靠的运输。在这一层，一般都是和 Socket 打交道，Socket 是一组封装的编程调用接口，通过它，我们就能操作 TCP、UDP 进行连接的建立等。这一层指定了把数据送到对应的端口号</td>
+</tr>
+<tr>
+<td>网络层（IP 等）</td>
+<td>这一层IP协议，以及一些路由选择协议等等，所以这一层的指定了数据要传输到哪个IP地址。中间涉及到一些最优线路，路由选择算法等</td>
+</tr>
+<tr>
+<td>数据链路层（ARP）</td>
+<td>负责把 IP 地址解析为 MAC 地址，即硬件地址，这样就找到了对应的唯一的机器</td>
+</tr>
+<tr>
+<td>物理层</td>
+<td>提供二进制流传输服务，也就是真正开始通过传输介质（有线、无线）开始进行数据的传输</td>
+</tr>
+</tbody>
+</table>
+<h1 id="http">HTTP 相关</h1>
+<h2 id="_2">通用头部</h2>
+<h2 id="_3">请求报文</h2>
+<p>http 请求由三部分组成，分别是：请求行、请求头、请求体</p>
+<h3 id="_4">请求行</h3>
+<p>请求行以一个方法符号开头，以空格分开，格式如下：
+<strong>Method Request-URI HTTP-Version CRLF</strong> </p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Method</td>
+<td>请求方法如 post/get</td>
+</tr>
+<tr>
+<td>Request-URI</td>
+<td>资源标识符（请求路径）</td>
+</tr>
+<tr>
+<td>HTTP-Version</td>
+<td>请求的HTTP协议版本</td>
+</tr>
+<tr>
+<td>CRLF</td>
+<td>回车和换行（除了作为结尾的CRLF外，不允许出现单独的CR或LF字符）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_5">请求方法</h4>
+<ul>
+<li>HTTP 1.0</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>请求获取 Request-URI 所标识的资源</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>在 Request-URI 所标识的资源后附加新的数据</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>请求获取由 Request-URI 所标识的资源的响应消息报头</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>HTTP 1.1 新增</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PUT</td>
+<td>请求服务器存储一个资源，并用 Request-URI 作为其标识</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>请求服务器删除 Request-URI 所标识的资源</td>
+</tr>
+<tr>
+<td>TRACE</td>
+<td>请求服务器回送收到的请求信息，主要用于测试或诊断</td>
+</tr>
+<tr>
+<td>CONNECT</td>
+<td>保留将来使用</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>请求查询服务器的性能，或者查询与资源相关的选项和需求</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>GET &amp; POST 的区别</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>区别</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据传输方式</td>
+<td>GET 请求通过 URL 传输数据，而 POST 的数据通过请求体传输。</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>POST的数据因为在请求主体内，所以有一定的安全性保证，而 GET 的数据在 URL 中，通过历史记录，缓存很容易查到数据信息。</td>
+</tr>
+<tr>
+<td>数据类型不同</td>
+<td>GET只允许 ASCII 字符，而 POST 无限制</td>
+</tr>
+<tr>
+<td>特性</td>
+<td>GET 是安全无害（只读）且幂等（多次提交等于一次提交），而 POST 是非安全非幂等，可能重复提交表单</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">请求头</h3>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>解释</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accept</td>
+<td>指定客户端能够接收的内容类型</td>
+<td>Accept: text/plain, text/html,application/json</td>
+</tr>
+<tr>
+<td>Accept-Charset</td>
+<td>浏览器可以接受的字符编码集</td>
+<td>Accept-Charset: iso-8859-5</td>
+</tr>
+<tr>
+<td>Accept-Encoding</td>
+<td>指定浏览器可以支持的web服务器返回内容压缩编码类型。</td>
+<td>Accept-Encoding: compress, gzip</td>
+</tr>
+<tr>
+<td>Accept-Language</td>
+<td>浏览器可接受的语言</td>
+<td>Accept-Language: en,zh</td>
+</tr>
+<tr>
+<td>Accept-Ranges</td>
+<td>可以请求网页实体的一个或者多个子范围字段</td>
+<td>Accept-Ranges: bytes</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>HTTP授权的授权证书</td>
+<td>Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</td>
+</tr>
+<tr>
+<td>Cache-Control</td>
+<td>指定请求和响应遵循的缓存机制</td>
+<td>Cache-Control: no-cache</td>
+</tr>
+<tr>
+<td>Connection</td>
+<td>表示是否需要持久连接。（HTTP 1.1默认进行持久连接）</td>
+<td>Connection: close</td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td>HTTP请求发送时，会把保存在该请求域名下的所有cookie值一起发送给web服务器。</td>
+<td>Cookie: $Version=1; Skin=new;</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>请求的内容长度</td>
+<td>Content-Length: 348</td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>请求的与实体对应的MIME信息</td>
+<td>Content-Type: application/</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>请求发送的日期和时间</td>
+<td>Date: Tue, 15 Nov 2010 08:12:31 GMT</td>
+</tr>
+<tr>
+<td>Expect</td>
+<td>请求的特定的服务器行为</td>
+<td>Expect: 100-continue</td>
+</tr>
+<tr>
+<td>From</td>
+<td>发出请求的用户的Email</td>
+<td>From: user@email.com</td>
+</tr>
+<tr>
+<td>Host</td>
+<td>指定请求的服务器的域名和端口号</td>
+<td>Host: www.zcmhi.com</td>
+</tr>
+<tr>
+<td>If-Match</td>
+<td>只有请求内容与实体相匹配才有效</td>
+<td>If-Match: “737060cd8c284d8af7ad3082f209582d”</td>
+</tr>
+<tr>
+<td>If-Modified-Since</td>
+<td>如果请求的部分在指定时间之后被修改则请求成功，未被修改则返回304代码</td>
+<td>If-Modified-Since: Sat, 29 Oct 2010 19:43:31 GMT</td>
+</tr>
+<tr>
+<td>If-None-Match</td>
+<td>如果内容未改变返回304代码，参数为服务器先前发送的Etag，与服务器回应的Etag比较判断是否改变</td>
+<td>If-None-Match: “737060cd8c284d8af7ad3082f209582d”</td>
+</tr>
+<tr>
+<td>If-Range</td>
+<td>如果实体未改变，服务器发送客户端丢失的部分，否则发送整个实体。参数也为Etag</td>
+<td>If-Range: “737060cd8c284d8af7ad3082f209582d”</td>
+</tr>
+<tr>
+<td>If-Unmodified-Since</td>
+<td>只在实体在指定时间之后未被修改才请求成功</td>
+<td>If-Unmodified-Since: Sat, 29 Oct 2010 19:43:31 GMT</td>
+</tr>
+<tr>
+<td>Max-Forwards</td>
+<td>限制信息通过代理和网关传送的时间</td>
+<td>Max-Forwards: 10</td>
+</tr>
+<tr>
+<td>Pragma</td>
+<td>用来包含实现特定的指令</td>
+<td>Pragma: no-cache</td>
+</tr>
+<tr>
+<td>Proxy-Authorization</td>
+<td>连接到代理的授权证书</td>
+<td>Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>只请求实体的一部分，指定范围</td>
+<td>Range: bytes=500-999</td>
+</tr>
+<tr>
+<td>Referer</td>
+<td>先前网页的地址，当前请求网页紧随其后,即来路</td>
+<td>Referer: http://www.zcmhi.com/archives...</td>
+</tr>
+<tr>
+<td>TE</td>
+<td>客户端愿意接受的传输编码，并通知服务器接受接受尾加头信息</td>
+<td>TE: trailers,deflate;q=0.5</td>
+</tr>
+<tr>
+<td>Upgrade</td>
+<td>向服务器指定某种传输协议以便服务器进行转换（如果支持）</td>
+<td>Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11</td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>User-Agent的内容包含发出请求的用户信息</td>
+<td>User-Agent: Mozilla/5.0 (Linux; X11)</td>
+</tr>
+<tr>
+<td>Via</td>
+<td>通知中间网关或代理服务器地址，通信协议</td>
+<td>Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>关于消息实体的警告信息</td>
+<td>Warn: 199 Miscellaneous warning</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">请求体</h3>
+<h2 id="_8">响应报文</h2>
+<ul>
+<li>响应报文</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>组成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>状态行</td>
+<td>状态码如 200、协议版本等</td>
+</tr>
+<tr>
+<td>响应头</td>
+<td>即返回的 header</td>
+</tr>
+<tr>
+<td>响应体</td>
+<td>响应的正文数据</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_9">常见状态码</h3>
+<p><strong>2XX 成功</strong>
+- 200 OK，表示从客户端发来的请求在服务器端被正确处理
+- 204 No content，表示请求成功，但响应报文不含实体的主体部分
+- 206 Partial Content，进行范围请求</p>
+<p><strong>3XX 重定向</strong>
+- 301 moved permanently，永久性重定向，表示资源已被分配了新的 URL
+- 302 found，临时性重定向，表示资源临时被分配了新的 URL
+- 303 see other，表示资源存在着另一个 URL，应使用 GET 方法丁香获取资源
+- 304 not modified，表示服务器允许访问资源，但因发生请求未满足条件的情况
+- 307 temporary redirect，临时重定向，和 302 含义相同</p>
+<p><strong>4XX 客户端错误</strong>
+- 400 bad request，请求报文存在语法错误
+- 401 unauthorized，表示发送的请求需要有通过 HTTP 认证的认证信息
+- 403 forbidden，表示对请求资源的访问被服务器拒绝
+- 404 not found，表示在服务器上没有找到请求的资源</p>
+<p><strong>5XX 服务器错误</strong>
+- 500 internal sever error，表示服务器端在执行请求时发生了错误
+- 503 service unavailable，表明服务器暂时处于超负载或正在停机维护，无法处理请求</p>
+<h3 id="_10">响应头</h3>
+<h2 id="_11">缓存机制</h2>
+<p><img alt="" src="https://upload-images.jianshu.io/upload_images/1445840-c3465ef477e24416.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/930/format/webp" /></p>
+<ul>
+<li>Cache-control 主要包含以下几个字段：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>private</td>
+<td>只有客户端可以缓存</td>
+</tr>
+<tr>
+<td>public</td>
+<td>客户端和代理服务器都可以缓存</td>
+</tr>
+<tr>
+<td>max-age</td>
+<td>缓存的过期时间</td>
+</tr>
+<tr>
+<td>no-cache</td>
+<td>需要使用对比缓存来验证缓存数据，如果服务端确认资源没有更新，则返回304，取本地缓存即可，如果有更新，则返回最新的资源。做对比缓存与 Etag 有关。</td>
+</tr>
+<tr>
+<td>no-store</td>
+<td>这个字段打开，则不会进行缓存，也不会取缓存</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Etag：当客户端发送第一次请求时服务端会下发当前请求资源的标识码 Etag ，下次再请求时，客户端则会通过 header 里的 If-None-Match 将这个标识码 Etag 带上，服务端将客户端传来的 Etag 与最新的资源 Etag 做对比，如果一样，则表示资源没有更新，返回304。</li>
+</ul>
+<h2 id="http-11">HTTP 1.1</h2>
+<p>对比 1.0，HTTP 1.1 主要区别主要体现在：
+- <strong>缓存处理</strong>：在 HTTP 1.0 中主要使用 header 里的 If-Modified-Since，Expires 来做为缓存判断的标准，HTTP1.1 则引入了更多的缓存控制策略例如 Entity tag，If-Unmodified-Since, If-Match, If-None-Match 等更多可供选择的缓存头来控制缓存策略。
+<br>
+- <strong>带宽优化及网络连接的使用</strong>：HTTP1.1 则在请求头引入了 range 头域，它允许只请求资源的某个部分，即返回码是206（Partial Content），避免带宽浪费。
+<br>
+- <strong>错误通知管理</strong>：HTTP 1.1 新增了 24 个错误状态响应码，410（Gone）表示服务器上的某个资源被永久性的删除。
+<br>
+- <strong>Host 头处理</strong>：HTTP 1.1 的请求消息和响应消息都应支持Host头域，且请求消息中如果没有Host头域会报告一个错误（400 Bad Request）。
+<br>
+- <strong>长连接</strong>：HTTP 1.1 支持长连接和请求的流水线理，在一个 TCP 连接上可以传送多个 HTTP 请求和响应，减少了建立和关闭连接的消耗和延迟，在HTTP1.1中默认开启Connection：keep-alive。</p>
+<h2 id="http-20">HTTP 2.0</h2>
+<p>Okhttp 支持配置使用 HTTP 2.0 协议，HTTP 2.0 相对于 Http1.x 来说提升是巨大的，主要有以下几点：
+- <strong>二进制格式</strong>：http1.x 是文本协议，而 http2.0 是二进制以帧为基本单位，是一个二进制协议，一帧中除了包含数据外同时还包含该帧的标识：Stream Identifier，即标识了该帧属于哪个 request，使得网络传输变得十分灵活。
+<br>
+- <strong>多路复用</strong>：多个请求共用一个 TCP 连接，多个请求可以同时在这个 TCP 连接上并发，一个request 对应一个 id。
+<br>
+- <strong>header 压缩</strong>：HTTP2.0 使用 encoder 来减少需要传输的 header 大小，通讯双方各自cache一份 header fields 表，避免了重复传输，流量消耗，提高效率。
+<br>
+- <strong>支持服务端推送</strong></p>
+<h2 id="https">HTTPS</h2>
+<p>HTTP 的端口号是 80，HTTPS 是 443，HTTPS 需要到 CA 申请证书，一般免费证书很少，需要交费</p>
+<p>SSL 的全称是 Secure Sockets Layer，即安全套接层协议，是为网络通信提供安全及数据完整性的一种安全协议。SSL协议在1994年被Netscape发明，后来各个浏览器均支持 SSL，其最新的版本是 3.0</p>
+<p>TLS 的全称是 Transport Layer Security，即安全传输层协议，最新版本的 TLS是 IETF 制定的一种新的协议，它建立在 SSL 3.0 协议规范之上，是SSL 3.0的后续版本。在 TLS 与SSL 3.0 之间存在着显著的差别，主要是它们所支持的加密算法不同，所以 TLS 与 SSL3.0 不能互操作。虽然 TLS 与 SSL 3.0 在加密算法上不同，但在理解 HTTPS 的过程中，可以把 SSL 和 TLS 看做是同一个协议。</p>
+<p>SSL（Secure Sockets Layer 安全套接层)，及其继任者传输层安全（Transport Layer Security，TLS）是为网络通信提供安全及数据完整性的一种安全协议。TLS与SSL在传输层对网络连接进行加密。</p>
+<h3 id="_12">加密原理</h3>
+<p>HTTPS 为了兼顾安全与效率，同时使用了对称加密和非对称加密。数据是被对称加密传输的，对称加密过程需要客户端的一个密钥，为了确保能把该密钥安全传输到服务器端，采用非对称加密对该密钥进行加密传输，总的来说，对数据进行对称加密，对称加密所要使用的密钥通过非对称加密传输。</p>
+<p><img alt="" src="https://upload-images.jianshu.io/upload_images/627325-dc83fef6ac2e6c88.png?imageMogr2/auto-orient/strip|imageView2/2/w/648/format/webp" /></p>
+<h1 id="tcpip">TCP/IP</h1>
+<p>IP（Internet Protocol）协议提供了主机和主机间的通信，为了完成不同主机的通信，我们需要某种方式来唯一标识一台主机，这个标识，就是著名的 IP 地址。通过IP地址，IP 协议就能够帮我们把一个数据包发送给对方。</p>
+<p>TCP 的全称是 Transmission Control Protocol，TCP 协议在 IP 协议提供的主机间通信功能的基础上，完成这两个主机上进程对进程的通信。</p>
+<h2 id="_13">三次握手</h2>
+<p>所谓三次握手(Three-way Handshake)，是指建立一个 TCP 连接时，需要客户端和服务器总共发送3个包。</p>
+<p>三次握手的目的是连接服务器指定端口，建立 TCP 连接，并同步连接双方的序列号和确认号，交换 TCP 窗口大小信息。在 socket 编程中，客户端执行 connect() 时。将触发三次握手。</p>
+<p><img alt="" src="https://raw.githubusercontent.com/HIT-Alibaba/interview/master/img/tcp-connection-made-three-way-handshake.png" /></p>
+<ul>
+<li>第一次握手(SYN=1, seq=x):</li>
+</ul>
+<p>客户端发送一个 TCP 的 SYN 标志位置 1 的包，指明客户端打算连接的服务器的端口，以及初始序号 X，保存在包头的序列号 (Sequence Number) 字段里。</p>
+<p>发送完毕后，客户端进入 <code>SYN_SEND</code> 状态。</p>
+<ul>
+<li>第二次握手(SYN=1, ACK=1, seq=y, ACKnum=x+1):</li>
+</ul>
+<p>服务器发回确认包(ACK)应答。即 SYN 标志位和 ACK 标志位均为 1。服务器端选择自己 ISN 序列号，放到 Seq 域里，同时将确认序号(Acknowledgement Number)设置为客户的 ISN 加1，即 X+1。 发送完毕后，服务器端进入 <code>SYN_RCVD</code> 状态。</p>
+<ul>
+<li>第三次握手(ACK=1，ACKnum=y+1)</li>
+</ul>
+<p>客户端再次发送确认包(ACK)，SYN 标志位为 0，ACK 标志位为 1，并且把服务器发来 ACK 的序号字段 +1，放在确定字段中发送给对方，并且在数据段放写 ISN 的 +1</p>
+<p>发送完毕后，客户端进入 ESTABLISHED 状态，当服务器端接收到这个包时，也进入 ESTABLISHED 状态，TCP 握手结束。</p>
+<h2 id="_14">四次挥手</h2>
+<p>TCP 的连接的拆除需要发送四个包，因此称为四次挥手(Four-way handshake)，也叫做改进的三次握手。客户端或服务器均可主动发起挥手动作，在 socket 编程中，任何一方执行 close() 操作即可产生挥手操作。</p>
+<p><img alt="" src="https://raw.githubusercontent.com/HIT-Alibaba/interview/master/img/tcp-connection-closed-four-way-handshake.png" /></p>
+<ul>
+<li>第一次挥手(FIN=1，seq=x)</li>
+</ul>
+<p>假设客户端想要关闭连接，客户端发送一个 FIN 标志位置为1的包，表示自己已经没有数据可以发送了，但是仍然可以接受数据。</p>
+<p>发送完毕后，客户端进入 FIN_WAIT_1 状态。</p>
+<ul>
+<li>第二次挥手(ACK=1，ACKnum=x+1)</li>
+</ul>
+<p>服务器端确认客户端的 FIN 包，发送一个确认包，表明自己接受到了客户端关闭连接的请求，但还没有准备好关闭连接。</p>
+<p>发送完毕后，服务器端进入 CLOSE_WAIT 状态，客户端接收到这个确认包之后，进入 FIN_WAIT_2 状态，等待服务器端关闭连接。</p>
+<ul>
+<li>第三次挥手(FIN=1，seq=y)</li>
+</ul>
+<p>服务器端准备好关闭连接时，向客户端发送结束连接请求，FIN 置为1。</p>
+<p>发送完毕后，服务器端进入 LAST_ACK 状态，等待来自客户端的最后一个ACK。</p>
+<ul>
+<li>第四次挥手(ACK=1，ACKnum=y+1)</li>
+</ul>
+<p>客户端接收到来自服务器端的关闭请求，发送一个确认包，并进入 TIME_WAIT状态，等待可能出现的要求重传的 ACK 包。</p>
+<p>服务器端接收到这个确认包之后，关闭连接，进入 CLOSED 状态。</p>
+<p>客户端等待了某个固定时间（两个最大段生命周期，2MSL，2 Maximum Segment Lifetime）之后，没有收到服务器端的 ACK ，认为服务器端已经正常关闭连接，于是自己也关闭连接，进入 CLOSED 状态。</p>
+<h2 id="tcp-udp">TCP 与 UDP 的区别</h2>
+<table>
+<thead>
+<tr>
+<th>区别点</th>
+<th>TCP</th>
+<th>UDP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>连接性</td>
+<td>面向连接</td>
+<td>无连接</td>
+</tr>
+<tr>
+<td>可靠性</td>
+<td>可靠</td>
+<td>不可靠</td>
+</tr>
+<tr>
+<td>有序性</td>
+<td>有序</td>
+<td>无序</td>
+</tr>
+<tr>
+<td>面向</td>
+<td>字节流</td>
+<td>报文（保留报文的边界）</td>
+</tr>
+<tr>
+<td>有界性</td>
+<td>有界</td>
+<td>无界</td>
+</tr>
+<tr>
+<td>流量控制</td>
+<td>有（滑动窗口）</td>
+<td>无</td>
+</tr>
+<tr>
+<td>拥塞控制</td>
+<td>有（慢开始、拥塞避免、快重传、快恢复）</td>
+<td>无</td>
+</tr>
+<tr>
+<td>传输速度</td>
+<td>慢</td>
+<td>快</td>
+</tr>
+<tr>
+<td>量级</td>
+<td>重量级</td>
+<td>轻量级</td>
+</tr>
+<tr>
+<td>双工性</td>
+<td>全双工</td>
+<td>一对一、一对多、多对一、多对多</td>
+</tr>
+<tr>
+<td>头部</td>
+<td>大（20-60 字节）</td>
+<td>小（8 字节）</td>
+</tr>
+<tr>
+<td>应用</td>
+<td>文件传输、邮件传输、浏览器等</td>
+<td>即时通讯、视频通话等</td>
+</tr>
+</tbody>
+</table>
+<h1 id="socket">Socket</h1>
+<p>Socket 是一组操作 TCP/UDP 的 API，像 HttpURLConnection 和 Okhttp 这种涉及到比较底层的网络请求发送的，最终当然也都是通过 Socket 来进行网络请求连接发送，而像 Volley、Retrofit 则是更上层的封装。</p>
+<h2 id="_15">使用示例</h2>
+<p>使用 socket 的步骤如下：
+- 创建 ServerSocket 并监听客户连接；
+- 使用 Socket 连接服务端；
+- 通过 Socket.getInputStream()/getOutputStream() 获取输入输出流进行通信。</p>
+<pre><code class="language-java">public class EchoClient {
+
+    private final Socket mSocket;
+
+    public EchoClient(String host, int port) throws IOException {
+        // 创建 socket 并连接服务器
+        mSocket = new Socket(host, port);
+    }
+
+    public void run() {
+        // 和服务端进行通信
+        Thread readerThread = new Thread(this::readResponse);
+        readerThread.start();
+
+        OutputStream out = mSocket.getOutputStream();
+        byte[] buffer = new byte[1024];
+        int n;
+        while ((n = System.in.read(buffer)) &gt; 0) {
+            out.write(buffer, 0, n);
+        }
+    }
+
+    private void readResponse() {
+        try {
+            InputStream in = mSocket.getInputStream();
+            byte[] buffer = new byte[1024];
+            int n;
+            while ((n = in.read(buffer)) &gt; 0) {
+                System.out.write(buffer, 0, n);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void main(String[] argv) {
+        try {
+            // 由于服务端运行在同一主机，这里我们使用 localhost
+            EchoClient client = new EchoClient(&quot;localhost&quot;, 9877);
+            client.run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

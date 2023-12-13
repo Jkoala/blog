@@ -1,0 +1,2064 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Android扩展知识点 - koala</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">koala</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../log/" class="nav-link">Log</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Java <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Java/Java%E6%B5%81/" class="dropdown-item">Java流</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/Java%E7%BC%96%E7%A0%81/" class="dropdown-item">Java编码</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/LocalDateTime%E5%A4%84%E7%90%86/" class="dropdown-item">LocalDateTime处理</a>
+</li>
+                                    
+<li>
+    <a href="../../../Java/%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/" class="dropdown-item">参考文档</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">加密算法</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Java/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/%E5%85%A5%E9%97%A8/" class="dropdown-item">入门</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">多线程</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-notion/" class="dropdown-item">并发编程 notion</a>
+</li>
+            
+<li>
+    <a href="../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" class="dropdown-item">并发编程</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PC端 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../PC%E7%AB%AF/electron/" class="dropdown-item">Electron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Android <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../android%20%E4%BB%BB%E5%8A%A1%E5%AE%8C%E6%88%90%E5%BA%A6/" class="dropdown-item">Android 任务完成度</a>
+</li>
+                                    
+<li>
+    <a href="../../%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/" class="dropdown-item">代码模板</a>
+</li>
+                                    
+<li>
+    <a href="../../%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/" class="dropdown-item">参考文档</a>
+</li>
+                                    
+<li>
+    <a href="../../%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/" class="dropdown-item">学习计划</a>
+</li>
+                                    
+<li>
+    <a href="../../%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="dropdown-item">学习记录</a>
+</li>
+                                    
+<li>
+    <a href="../../%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E5%AD%A6%E4%B9%A0/" class="dropdown-item">项目实战学习</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android 系列博客</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Android%20%E7%B3%BB%E5%88%97%E5%8D%9A%E5%AE%A2/Android%20Service/" class="dropdown-item">Android Service</a>
+</li>
+            
+<li>
+    <a href="../../Android%20%E7%B3%BB%E5%88%97%E5%8D%9A%E5%AE%A2/Android%20fragment/" class="dropdown-item">Android fragment</a>
+</li>
+            
+<li>
+    <a href="../../Android%20%E7%B3%BB%E5%88%97%E5%8D%9A%E5%AE%A2/Android%20%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/" class="dropdown-item">Android 事件分发机制</a>
+</li>
+            
+<li>
+    <a href="../../Android%20%E7%B3%BB%E5%88%97%E5%8D%9A%E5%AE%A2/%E5%AE%89%E5%8D%93%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/" class="dropdown-item">安卓线程模型</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android Notes</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Android%E5%BC%80%E6%BA%90%E5%BA%93%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" class="dropdown-item">Android开源库源码分析</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Android扩展知识点</a>
+</li>
+            
+<li>
+    <a href="../Android%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Android知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../C%2B%2B%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">C++知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../Framework%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Framework知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../Gradle%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">依赖项配置</a>
+</li>
+            
+<li>
+    <a href="../Java%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Java知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../Kotlin%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Kotlin知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E9%A2%98%E6%B1%87%E6%80%BB/" class="dropdown-item">常见面试算法题汇总</a>
+</li>
+            
+<li>
+    <a href="../%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">性能优化知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" class="dropdown-item">计算机网络基础</a>
+</li>
+            
+<li>
+    <a href="../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%B1%87%E6%80%BB/" class="dropdown-item">设计模式汇总</a>
+</li>
+            
+<li>
+    <a href="../%E9%9F%B3%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">音视频知识点汇总</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android framework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../android%20framework/%E5%AD%A6%E4%B9%A0%E5%87%86%E5%88%99/" class="dropdown-item">学习准则</a>
+</li>
+            
+<li>
+    <a href="../../android%20framework/%E6%9D%82%E4%B9%B1%E7%AC%94%E8%AE%B0/" class="dropdown-item">杂乱笔记</a>
+</li>
+            
+<li>
+    <a href="../../android%20framework/%E6%9E%B6%E6%9E%84/" class="dropdown-item">架构</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Liunx <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../liunx/git%20%E5%91%BD%E4%BB%A4/" class="dropdown-item">Git 命令</a>
+</li>
+                                    
+<li>
+    <a href="../../../liunx/jenkins/" class="dropdown-item">Jenkins</a>
+</li>
+                                    
+<li>
+    <a href="../../../liunx/yum%20%E5%91%BD%E4%BB%A4/" class="dropdown-item">Yum 命令</a>
+</li>
+                                    
+<li>
+    <a href="../../../liunx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="dropdown-item">常用命令</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../python/QT5/" class="dropdown-item">QT5</a>
+</li>
+                                    
+<li>
+    <a href="../../../python/numpy/" class="dropdown-item">Numpy</a>
+</li>
+                                    
+<li>
+    <a href="../../../python/turtle/" class="dropdown-item">Turtle</a>
+</li>
+                                    
+<li>
+    <a href="../../../python/%E6%95%A3%E4%B9%B1%E7%9F%A5%E8%AF%86/" class="dropdown-item">散乱知识</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Socket <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../socket/socket%20%E8%8D%89%E7%A8%BF/" class="dropdown-item">Socket 草稿</a>
+</li>
+                                    
+<li>
+    <a href="../../../socket/socket%20%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5%E6%91%98%E8%A6%81/" class="dropdown-item">Socket 重要概念摘要</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Srping 系列 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/Oauth2%20%E5%9B%9B%E7%A7%8D%E6%8E%88%E6%9D%83%E6%A8%A1%E5%BC%8F/" class="dropdown-item">Oauth2 四种授权模式</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/Q%26A/" class="dropdown-item">Q&A</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/demo%20%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E5%AD%A6%E4%B9%A0/" class="dropdown-item">Demo 项目搭建学习</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/token%20%E7%B3%BB%E5%88%97%E7%9F%A5%E8%AF%86/" class="dropdown-item">Token 系列知识</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/" class="dropdown-item">参考文档</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/%E6%8E%88%E6%9D%83%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="dropdown-item">授权服务器配置</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">详解</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/security/%E8%AF%A6%E8%A7%A3/TokenStore/" class="dropdown-item">TokenStore</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">开发问题详解</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/mybatis-plus/" class="dropdown-item">Mybatis plus</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/sql%E8%AF%AD%E5%8F%A5/" class="dropdown-item">Sql语句</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E4%BC%A0%E5%8F%82%E6%95%B0/" class="dropdown-item">传参数</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/" class="dropdown-item">切面编程</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%8F%82%E6%95%B0%E6%95%88%E9%AA%8C/" class="dropdown-item">参数效验</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%BC%80%E5%8F%91%E6%A6%82%E5%8F%99/" class="dropdown-item">开发概叙</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F/" class="dropdown-item">开发注意</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E6%95%88%E9%AA%8C/" class="dropdown-item">效验</a>
+</li>
+            
+<li>
+    <a href="../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E8%A7%84%E8%8C%83%E9%97%AE%E9%A2%98/" class="dropdown-item">规范问题</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Es</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/es/ElasticSearch%207.14/" class="dropdown-item">ElasticSearch 7.14-分布式搜索引擎</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/es/es/" class="dropdown-item">Es</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Nacos</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/nacos/KubeSphere%20%E9%83%A8%E7%BD%B2%20nacos/" class="dropdown-item">KubeSphere 部署 nacos</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/nacos/nacos%E5%91%BD%E4%BB%A4/" class="dropdown-item">Nacos命令</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">消息队列</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RocketMQ%E5%85%A8%E6%99%AF%E5%9B%BE/" class="dropdown-item">RocketMQ全景图</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketMQ%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="dropdown-item">rocketMQ 官方文档阅读笔记</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketmq%20%E5%9F%BA%E6%9C%AC%E6%A0%B7%E4%BE%8B/" class="dropdown-item">Rocketmq 基本样例</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketmq%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%BD%BF%E7%94%A8/" class="dropdown-item">Rocketmq 控制台使用</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">云原生 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubemetes%E5%91%BD%E4%BB%A4/" class="dropdown-item">Kubemetes命令</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubesphere/" class="dropdown-item">Kubesphere</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DevOps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/DevOps/DevOps/" class="dropdown-item">DevOps</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Docker</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker%20%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" class="dropdown-item">Docker 命令大全</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker%20%E6%A1%88%E4%BE%8B/" class="dropdown-item">Docker 案例</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/k8s%E5%91%BD%E4%BB%A4/" class="dropdown-item">K8s命令</a>
+</li>
+            
+<li>
+    <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/%E9%97%AE%E9%A2%98/" class="dropdown-item">问题</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发常见问题 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/mybatis%20%E7%BC%96%E5%86%99/" class="dropdown-item">Mybatis 编写</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%AE%9E%E4%BD%93%E7%B1%BB/" class="dropdown-item">实体类</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9A%E4%B9%89/" class="dropdown-item">数据库定义</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">解决方案</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E9%99%90%E5%88%B6%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%A7%E5%B0%8F/" class="dropdown-item">限制文件上传大小</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开源项目 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90/" class="dropdown-item">参与开源</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">微服务 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/K8S%20%E5%85%A5%E9%97%A8/" class="dropdown-item">K8S 入门</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/NACOS%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="dropdown-item">NACOS 基础知识</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Spring cloud</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/spring-cloud%20%E5%AD%A6%E4%B9%A0/" class="dropdown-item">Spring cloud 学习</a>
+</li>
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/%E7%BD%91%E5%85%B3/" class="dropdown-item">网关</a>
+</li>
+            
+<li>
+    <a href="../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/%E7%BD%91%E5%85%B3%E9%9B%86%E6%88%90Oauth2%E8%AF%A6%E8%A7%A3/" class="dropdown-item">网关集成Oauth2详解</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">数据库 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mybatis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mybatis/mybatis%20%E5%85%A8%E8%A7%A3/" class="dropdown-item">使用案例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mybatis plus</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mybatis-plus/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E8%AF%A6%E8%A7%A3/" class="dropdown-item">官方文档详解</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mysql</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="dropdown-item">Mysql 常用命令</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%20%E7%B4%A2%E5%BC%95%E7%AF%87/" class="dropdown-item">Mysql 索引篇</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%B2%97%E8%AF%BB/" class="dropdown-item">Mysql官方文档粗读</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E7%BC%96%E7%A8%8B/" class="dropdown-item">Mysql编程</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E8%AF%A6%E8%A7%A3/" class="dropdown-item">Mysql详解</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E9%97%AE%E9%A2%98%E5%A4%A7%E5%85%A8/" class="dropdown-item">Mysql问题大全</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/readme/" class="dropdown-item">Readme</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mysql45讲</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql45%E8%AE%B2/Info/" class="dropdown-item">Info</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql45%E8%AE%B2/%E6%97%A5%E5%BF%97/" class="dropdown-item">日志</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Redis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%20%E5%9F%BA%E7%A1%80%E6%96%87%E6%A1%A3/" class="dropdown-item">Redis 基础文档</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%AC%94%E8%AE%B0/" class="dropdown-item">Redis 官方文档笔记</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/%E5%8E%9F%E7%94%9F%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/" class="dropdown-item">原生分布式锁实现方式</a>
+</li>
+            
+<li>
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="dropdown-item">常见问题</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">社招面试 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E7%A4%BE%E6%8B%9B%E9%9D%A2%E8%AF%95/%E5%8F%82%E8%80%83/" class="dropdown-item">参考</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E7%A4%BE%E6%8B%9B%E9%9D%A2%E8%AF%95/%E6%9D%82%E9%A1%B9/" class="dropdown-item">杂项</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E7%A4%BE%E6%8B%9B%E9%9D%A2%E8%AF%95/%E9%A9%AC%E5%A3%AB%E5%85%B5%E9%9D%A2%E8%AF%95%E8%A7%86%E9%A2%912023/" class="dropdown-item">马士兵面试视频2023</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">设计模式 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/" class="dropdown-item">模板模式</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/" class="dropdown-item">观察者模式</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Android%E5%BC%80%E6%BA%90%E5%BA%93%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Android%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#art" class="nav-link">ART</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#art_1" class="nav-link">ART 功能</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#art-gc" class="nav-link">ART GC</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#hook" class="nav-link">Hook</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">基本流程</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">使用示例</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#proguard" class="nav-link">Proguard</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">规则</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">公共模板</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">常用的自定义混淆规则</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#aar" class="nav-link">aar中增加独立的混淆配置</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_8" class="nav-link">检查混淆和追踪异常</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_9" class="nav-link">架构</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mvc" class="nav-link">MVC</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mvp" class="nav-link">MVP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mvvm" class="nav-link">MVVM</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#jetpack" class="nav-link">Jetpack</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">架构</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">使用示例</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ndk" class="nav-link">NDK 开发</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#jni" class="nav-link">JNI 基础</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ndk_1" class="nav-link">NDK 开发</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#android-ndk-api" class="nav-link">常用的 Android NDK 原生 API</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_14" class="nav-link">类加载器</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_15" class="nav-link">双亲委托模式</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dexpathlist" class="nav-link">DexPathList</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<ul>
+<li><a href="#art">ART</a></li>
+<li><a href="#art-%e5%8a%9f%e8%83%bd">ART 功能</a><ul>
+<li><a href="#%e9%a2%84%e5%85%88-aot-%e7%bc%96%e8%af%91">预先 (AOT) 编译</a></li>
+<li><a href="#%e5%9e%83%e5%9c%be%e5%9b%9e%e6%94%b6%e4%bc%98%e5%8c%96">垃圾回收优化</a></li>
+<li><a href="#%e5%bc%80%e5%8f%91%e5%92%8c%e8%b0%83%e8%af%95%e6%96%b9%e9%9d%a2%e7%9a%84%e4%bc%98%e5%8c%96">开发和调试方面的优化</a></li>
+</ul>
+</li>
+<li><a href="#art-gc">ART GC</a></li>
+<li><a href="#hook">Hook</a></li>
+<li><a href="#%e5%9f%ba%e6%9c%ac%e6%b5%81%e7%a8%8b">基本流程</a></li>
+<li><a href="#%e4%bd%bf%e7%94%a8%e7%a4%ba%e4%be%8b">使用示例</a></li>
+<li><a href="#proguard">Proguard</a></li>
+<li><a href="#%E8%A7%84%E5%88%99">规则</a></li>
+<li><a href="#%e5%85%ac%e5%85%b1%e6%a8%a1%e6%9d%bf">公共模板</a></li>
+<li><a href="#%e5%b8%b8%e7%94%a8%e7%9a%84%e8%87%aa%e5%ae%9a%e4%b9%89%e6%b7%b7%e6%b7%86%e8%a7%84%e5%88%99">常用的自定义混淆规则</a></li>
+<li><a href="#aar%e4%b8%ad%e5%a2%9e%e5%8a%a0%e7%8b%ac%e7%ab%8b%e7%9a%84%e6%b7%b7%e6%b7%86%e9%85%8d%e7%bd%ae">aar中增加独立的混淆配置</a></li>
+<li><a href="#%e6%a3%80%e6%9f%a5%e6%b7%b7%e6%b7%86%e5%92%8c%e8%bf%bd%e8%b8%aa%e5%bc%82%e5%b8%b8">检查混淆和追踪异常</a></li>
+<li><a href="#%e6%9e%b6%e6%9e%84">架构</a></li>
+<li><a href="#mvc">MVC</a></li>
+<li><a href="#mvp">MVP</a></li>
+<li><a href="#mvvm">MVVM</a></li>
+<li><a href="#jetpack">Jetpack</a></li>
+<li><a href="#%e6%9e%b6%e6%9e%84-1">架构</a></li>
+<li><a href="#%e4%bd%bf%e7%94%a8%e7%a4%ba%e4%be%8b-1">使用示例</a></li>
+<li><a href="#ndk-%e5%bc%80%e5%8f%91">NDK 开发</a></li>
+<li><a href="#jni-%e5%9f%ba%e7%a1%80">JNI 基础</a><ul>
+<li><a href="#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b">数据类型</a></li>
+<li><a href="#string-%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%87%bd%e6%95%b0%e6%93%8d%e4%bd%9c">String 字符串函数操作</a></li>
+<li><a href="#%e5%b8%b8%e7%94%a8-jni-%e8%ae%bf%e9%97%ae-java-%e5%af%b9%e8%b1%a1%e6%96%b9%e6%b3%95">常用 JNI 访问 Java 对象方法</a></li>
+</ul>
+</li>
+<li><a href="#ndk-%e5%bc%80%e5%8f%91-1">NDK 开发</a><ul>
+<li><a href="#%e5%9f%ba%e7%a1%80%e5%bc%80%e5%8f%91%e6%b5%81%e7%a8%8b">基础开发流程</a></li>
+<li><a href="#systemloadlibrary">System.loadLibrary()</a></li>
+</ul>
+</li>
+<li><a href="#cmake-%e6%9e%84%e5%bb%ba-ndk-%e9%a1%b9%e7%9b%ae">CMake 构建 NDK 项目</a></li>
+<li><a href="#%e5%b8%b8%e7%94%a8%e7%9a%84-android-ndk-%e5%8e%9f%e7%94%9f-api">常用的 Android NDK 原生 API</a></li>
+<li><a href="#%e7%b1%bb%e5%8a%a0%e8%bd%bd%e5%99%a8">类加载器</a></li>
+<li><a href="#%e5%8f%8c%e4%ba%b2%e5%a7%94%e6%89%98%e6%a8%a1%e5%bc%8f">双亲委托模式</a></li>
+<li><a href="#dexpathlist">DexPathList</a></li>
+</ul>
+<h1 id="art">ART</h1>
+<p>ART 代表 Android Runtime，其处理应用程序执行的方式完全不同于 Dalvik，Dalvik 是依靠一个 Just-In-Time (JIT) 编译器去解释字节码。开发者编译后的应用代码需要通过一个解释器在用户的设备上运行，这一机制并不高效，但让应用能更容易在不同硬件和架构上运 行。ART 则完全改变了这套做法，在应用安装时就预编译字节码到机器语言，这一机制叫 Ahead-Of-Time (AOT）编译。在移除解释代码这一过程后，应用程序执行将更有效率，启动更快。</p>
+<h2 id="art_1">ART 功能</h2>
+<h3 id="aot">预先 (AOT) 编译</h3>
+<p>ART 引入了预先编译机制，可提高应用的性能。ART 还具有比 Dalvik 更严格的安装时验证。在安装时，ART 使用设备自带的 dex2oat 工具来编译应用。该实用工具接受 DEX 文件作为输入，并为目标设备生成经过编译的应用可执行文件。该工具应能够顺利编译所有有效的 DEX 文件。</p>
+<h3 id="_1">垃圾回收优化</h3>
+<p>垃圾回收 (GC) 可能有损于应用性能，从而导致显示不稳定、界面响应速度缓慢以及其他问题。ART 通过以下几种方式对垃圾回收做了优化：
+- 只有一次（而非两次）GC 暂停
+- 在 GC 保持暂停状态期间并行处理
+- 在清理最近分配的短时对象这种特殊情况中，回收器的总 GC 时间更短
+- 优化了垃圾回收的工效，能够更加及时地进行并行垃圾回收，这使得 GC_FOR_ALLOC 事件在典型用例中极为罕见
+- 压缩 GC 以减少后台内存使用和碎片</p>
+<h3 id="_2">开发和调试方面的优化</h3>
+<ul>
+<li>支持采样分析器</li>
+</ul>
+<p>一直以来，开发者都使用 Traceview 工具（用于跟踪应用执行情况）作为分析器。虽然 Traceview 可提供有用的信息，但每次方法调用产生的开销会导致 Dalvik 分析结果出现偏差，而且使用该工具明显会影响运行时性能</p>
+<p>ART 添加了对没有这些限制的专用采样分析器的支持，因而可更准确地了解应用执行情况，而不会明显减慢速度。KitKat 版本为 Dalvik 的 Traceview 添加了采样支持。</p>
+<ul>
+<li>支持更多调试功能</li>
+</ul>
+<p>ART 支持许多新的调试选项，特别是与监控和垃圾回收相关的功能。例如，查看堆栈跟踪中保留了哪些锁，然后跳转到持有锁的线程；询问指定类的当前活动的实例数、请求查看实例，以及查看使对象保持有效状态的参考；过滤特定实例的事件（如断点）等。</p>
+<ul>
+<li>优化了异常和崩溃报告中的诊断详细信息</li>
+</ul>
+<p>当发生运行时异常时，ART 会为您提供尽可能多的上下文和详细信息。ART 会提供 <code>java.lang.ClassCastException</code>、<code>java.lang.ClassNotFoundException</code> 和 <code>java.lang.NullPointerException</code> 的更多异常详细信息（较高版本的 Dalvik 会提供 <code>java.lang.ArrayIndexOutOfBoundsException</code> 和 <code>java.lang.ArrayStoreException</code> 的更多异常详细信息，这些信息现在包括数组大小和越界偏移量；ART 也提供这类信息）。</p>
+<h2 id="art-gc">ART GC</h2>
+<p>ART 有多个不同的 GC 方案，这些方案包括运行不同垃圾回收器。默认方案是 CMS（并发标记清除）方案，主要使用粘性 CMS 和部分 CMS。粘性 CMS 是 ART 的不移动分代垃圾回收器。它仅扫描堆中自上次 GC 后修改的部分，并且只能回收自上次 GC 后分配的对象。除 CMS 方案外，当应用将进程状态更改为察觉不到卡顿的进程状态（例如，后台或缓存）时，ART 将执行堆压缩。</p>
+<p>除了新的垃圾回收器之外，ART 还引入了一种基于位图的新内存分配程序，称为 RosAlloc（插槽运行分配器）。此新分配器具有分片锁，当分配规模较小时可添加线程的本地缓冲区，因而性能优于 DlMalloc。</p>
+<p>与 Dalvik 相比，ART CMS 垃圾回收计划在很多方面都有一定的改善：</p>
+<ul>
+<li>
+<p>与 Dalvik 相比，暂停次数从 2 次减少到 1 次。Dalvik 的第一次暂停主要是为了进行根标记，即在 ART 中进行并发标记，让线程标记自己的根，然后马上恢复运行。</p>
+</li>
+<li>
+<p>与 Dalvik 类似，ART GC 在清除过程开始之前也会暂停 1 次。两者在这方面的主要差异在于：在此暂停期间，某些 Dalvik 环节在 ART 中并发进行。这些环节包括 java.lang.ref.Reference 处理、系统弱清除（例如，jni 弱全局等）、重新标记非线程根和卡片预清理。在 ART 暂停期间仍进行的阶段包括扫描脏卡片以及重新标记线程根，这些操作有助于缩短暂停时间。</p>
+</li>
+<li>
+<p>相对于 Dalvik，ART GC 改进的最后一个方面是粘性 CMS 回收器增加了 GC 吞吐量。不同于普通的分代 GC，粘性 CMS 不移动。系统会将年轻对象保存在一个分配堆栈（基本上是 java.lang.Object 数组）中，而非为其设置一个专属区域。这样可以避免移动所需的对象以维持低暂停次数，但缺点是容易在堆栈中加入大量复杂对象图像而使堆栈变长。</p>
+</li>
+</ul>
+<p>ART GC 与 Dalvik 的另一个主要区别在于 ART GC 引入了移动垃圾回收器。使用移动 GC 的目的在于通过堆压缩来减少后台应用使用的内存。目前，触发堆压缩的事件是 ActivityManager 进程状态的改变。当应用转到后台运行时，它会通知 ART 已进入不再“感知”卡顿的进程状态。此时 ART 会进行一些操作（例如，压缩和监视器压缩），从而导致应用线程长时间暂停。目前正在使用的两个移动 GC 是同构空间压缩和半空间压缩。</p>
+<ul>
+<li>
+<p>半空间压缩将对象在两个紧密排列的碰撞指针空间之间进行移动。这种移动 GC 适用于小内存设备，因为它可以比同构空间压缩稍微多节省一点内存。额外节省出的空间主要来自紧密排列的对象，这样可以避免 RosAlloc/DlMalloc 分配器占用开销。由于 CMS 仍在前台使用，且不能从碰撞指针空间中进行收集，因此当应用在前台使用时，半空间还要再进行一次转换。这种情况并不理想，因为它可能引起较长时间的暂停。</p>
+</li>
+<li>
+<p>同构空间压缩通过将对象从一个 RosAlloc 空间复制到另一个 RosAlloc 空间来实现。这有助于通过减少堆碎片来减少内存使用量。这是目前非低内存设备的默认压缩模式。相比半空间压缩，同构空间压缩的主要优势在于应用从后台切换到前台时无需进行堆转换。</p>
+</li>
+</ul>
+<h1 id="hook">Hook</h1>
+<h2 id="_3">基本流程</h2>
+<p>1、根据需求确定 要 hook 的对象<br />
+2、寻找要hook的对象的持有者，拿到要 hook 的对象<br />
+3、定义“要 hook 的对象”的代理类，并且创建该类的对象<br />
+4、使用上一步创建出来的对象，替换掉要 hook 的对象</p>
+<h2 id="_4">使用示例</h2>
+<pre><code class="language-java">/**
+* hook的核心代码
+* 这个方法的唯一目的：用自己的点击事件，替换掉 View 原来的点击事件
+*
+* @param view hook的范围仅限于这个view
+*/
+@SuppressLint({&quot;DiscouragedPrivateApi&quot;, &quot;PrivateApi&quot;})
+public static void hook(Context context, final View view) {//
+    try {
+        // 反射执行View类的getListenerInfo()方法，拿到v的mListenerInfo对象，这个对象就是点击事件的持有者
+        Method method = View.class.getDeclaredMethod(&quot;getListenerInfo&quot;);
+        method.setAccessible(true);//由于getListenerInfo()方法并不是public的，所以要加这个代码来保证访问权限
+        Object mListenerInfo = method.invoke(view);//这里拿到的就是mListenerInfo对象，也就是点击事件的持有者
+
+        // 要从这里面拿到当前的点击事件对象
+        Class&lt;?&gt; listenerInfoClz = Class.forName(&quot;android.view.View$ListenerInfo&quot;);// 这是内部类的表示方法
+        Field field = listenerInfoClz.getDeclaredField(&quot;mOnClickListener&quot;);
+        final View.OnClickListener onClickListenerInstance = (View.OnClickListener) field.get(mListenerInfo);//取得真实的mOnClickListener对象
+
+        // 2. 创建我们自己的点击事件代理类
+        //   方式1：自己创建代理类
+        //   ProxyOnClickListener proxyOnClickListener = new ProxyOnClickListener(onClickListenerInstance);
+        //   方式2：由于View.OnClickListener是一个接口，所以可以直接用动态代理模式
+        // Proxy.newProxyInstance的3个参数依次分别是：
+        // 本地的类加载器;
+        // 代理类的对象所继承的接口（用Class数组表示，支持多个接口）
+        // 代理类的实际逻辑，封装在new出来的InvocationHandler内
+        Object proxyOnClickListener = Proxy.newProxyInstance(context.getClass().getClassLoader(), new Class[]{View.OnClickListener.class}, new InvocationHandler() {
+            @Override
+            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                Log.d(&quot;HookSetOnClickListener&quot;, &quot;点击事件被hook到了&quot;);//加入自己的逻辑
+                return method.invoke(onClickListenerInstance, args);//执行被代理的对象的逻辑
+            }
+        });
+        // 3. 用我们自己的点击事件代理类，设置到&quot;持有者&quot;中
+        field.set(mListenerInfo, proxyOnClickListener);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+// 自定义代理类
+static class ProxyOnClickListener implements View.OnClickListener {
+    View.OnClickListener oriLis;
+
+    public ProxyOnClickListener(View.OnClickListener oriLis) {
+        this.oriLis = oriLis;
+    }
+
+    @Override
+    public void onClick(View v) {
+        Log.d(&quot;HookSetOnClickListener&quot;, &quot;点击事件被hook到了&quot;);
+        if (oriLis != null) {
+            oriLis.onClick(v);
+        }
+    }
+}
+</code></pre>
+<h1 id="proguard">Proguard</h1>
+<p>Proguard 具有以下三个功能：
+- 压缩（Shrink）: 检测和删除没有使用的类，字段，方法和特性
+- 优化（Optimize） : 分析和优化Java字节码
+- 混淆（Obfuscate）: 使用简短的无意义的名称，对类，字段和方法进行重命名</p>
+<h2 id="_5">规则</h2>
+<ul>
+<li>关键字</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keep</td>
+<td>保留类和类中的成员，防止被混淆或移除</td>
+</tr>
+<tr>
+<td>keepnames</td>
+<td>保留类和类中的成员，防止被混淆，成员没有被引用会被移除</td>
+</tr>
+<tr>
+<td>keepclassmembers</td>
+<td>只保留类中的成员，防止被混淆或移除</td>
+</tr>
+<tr>
+<td>keepclassmembernames</td>
+<td>只保留类中的成员，防止被混淆，成员没有引用会被移除</td>
+</tr>
+<tr>
+<td>keepclasseswithmembers</td>
+<td>保留类和类中的成员，防止被混淆或移除，保留指明的成员</td>
+</tr>
+<tr>
+<td>keepclasseswithmembernames</td>
+<td>保留类和类中的成员，防止被混淆，保留指明的成员，成员没有引用会被移除</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>通配符</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>通配符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\&lt;field></td>
+<td>匹配类中的所有字段</td>
+</tr>
+<tr>
+<td>\&lt;method></td>
+<td>匹配类中所有的方法</td>
+</tr>
+<tr>
+<td>\&lt;init></td>
+<td>匹配类中所有的构造函数</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配任意长度字符，不包含包名分隔符(.)</td>
+</tr>
+<tr>
+<td>**</td>
+<td>匹配任意长度字符，包含包名分隔符(.)</td>
+</tr>
+<tr>
+<td>***</td>
+<td>匹配任意参数类型</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>指定混淆时可使用字典</li>
+</ul>
+<pre><code>-applymapping filename 指定重用一个已经写好了的map文件作为新旧元素名的映射。
+-obfuscationdictionary filename 指定一个文本文件用来生成混淆后的名字。
+-classobfuscationdictionary filename 指定一个混淆类名的字典
+-packageobfuscationdictionary filename 指定一个混淆包名的字典
+-overloadaggressively 混淆的时候大量使用重载，多个方法名使用同一个混淆名（慎用）
+</code></pre>
+<h2 id="_6">公共模板</h2>
+<pre><code>#############################################
+#
+# 对于一些基本指令的添加
+#
+#############################################
+# 代码混淆压缩比，在 0~7 之间，默认为 5，一般不做修改
+-optimizationpasses 5
+
+# 混合时不使用大小写混合，混合后的类名为小写
+-dontusemixedcaseclassnames
+
+# 指定不去忽略非公共库的类
+-dontskipnonpubliclibraryclasses
+
+# 这句话能够使我们的项目混淆后产生映射文件
+# 包含有类名-&gt;混淆后类名的映射关系
+-verbose
+
+# 指定不去忽略非公共库的类成员
+-dontskipnonpubliclibraryclassmembers
+
+# 不做预校验，preverify 是 proguard 的四个步骤之一，Android 不需要 preverify，去掉这一步能够加快混淆速度。
+-dontpreverify
+
+# 保留 Annotation 不混淆
+-keepattributes *Annotation*,InnerClasses
+
+# 避免混淆泛型
+-keepattributes Signature
+
+# 抛出异常时保留代码行号
+-keepattributes SourceFile,LineNumberTable
+
+# 指定混淆是采用的算法，后面的参数是一个过滤器
+# 这个过滤器是谷歌推荐的算法，一般不做更改
+-optimizations !code/simplification/cast,!field/*,!class/merging/*
+
+
+#############################################
+#
+# Android开发中一些需要保留的公共部分
+#
+#############################################
+
+# 保留我们使用的四大组件，自定义的 Application 等等这些类不被混淆
+# 因为这些子类都有可能被外部调用
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Appliction
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class * extends android.view.View
+-keep public class com.android.vending.licensing.ILicensingService
+
+
+# 保留 support 下的所有类及其内部类
+-keep class android.support.** { *; }
+
+# 保留继承的
+-keep public class * extends android.support.v4.**
+-keep public class * extends android.support.v7.**
+-keep public class * extends android.support.annotation.**
+
+# 保留 R 下面的资源
+-keep class **.R$* { *; }
+
+# 保留本地 native 方法不被混淆
+-keepclasseswithmembernames class * {
+    native &lt;methods&gt;;
+}
+
+# 保留在 Activity 中的方法参数是view的方法，
+# 这样以来我们在 layout 中写的 onClick 就不会被影响
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+# 保留枚举类不被混淆
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# 保留我们自定义控件（继承自 View）不被混淆
+-keep public class * extends android.view.View {
+    *** get*();
+    void set*(***);
+    public &lt;init&gt;(android.content.Context);
+    public &lt;init&gt;(android.content.Context, android.util.AttributeSet);
+    public &lt;init&gt;(android.content.Context, android.util.AttributeSet, int);
+}
+
+# 保留 Parcelable 序列化类不被混淆
+-keep class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+
+# 保留 Serializable 序列化的类不被混淆
+-keepnames class * implements java.io.Serializable
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    !static !transient &lt;fields&gt;;
+    !private &lt;fields&gt;;
+    !private &lt;methods&gt;;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+# 对于带有回调函数的 onXXEvent、**On*Listener 的，不能被混淆
+-keepclassmembers class * {
+    void *(**On*Event);
+    void *(**On*Listener);
+}
+
+# webView 处理，项目中没有使用到 webView 忽略即可
+-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+    public *;
+}
+-keepclassmembers class * extends android.webkit.webViewClient {
+    public void *(android.webkit.WebView, java.lang.String, android.graphics.Bitmap);
+    public boolean *(android.webkit.WebView, java.lang.String);
+}
+-keepclassmembers class * extends android.webkit.webViewClient {
+    public void *(android.webkit.webView, java.lang.String);
+}
+
+# js
+-keepattributes JavascriptInterface
+-keep class android.webkit.JavascriptInterface { *; }
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface &lt;methods&gt;;
+}
+
+# @Keep
+-keep,allowobfuscation @interface android.support.annotation.Keep
+-keep @android.support.annotation.Keep class *
+-keepclassmembers class * {
+    @android.support.annotation.Keep *;
+}
+</code></pre>
+<h2 id="_7">常用的自定义混淆规则</h2>
+<pre><code class="language-xml"># 通配符*，匹配任意长度字符，但不含包名分隔符(.)
+# 通配符**，匹配任意长度字符，并且包含包名分隔符(.)
+
+# 不混淆某个类
+-keep public class com.jasonwu.demo.Test { *; }
+
+# 不混淆某个包所有的类
+-keep class com.jasonwu.demo.test.** { *; }
+
+# 不混淆某个类的子类
+-keep public class * com.jasonwu.demo.Test { *; }
+
+# 不混淆所有类名中包含了 ``model`` 的类及其成员
+-keep public class **.*model*.** {*;}
+
+# 不混淆某个接口的实现
+-keep class * implements com.jasonwu.demo.TestInterface { *; }
+
+# 不混淆某个类的构造方法
+-keepclassmembers class com.jasonwu.demo.Test { 
+  public &lt;init&gt;(); 
+}
+
+# 不混淆某个类的特定的方法
+-keepclassmembers class com.jasonwu.demo.Test { 
+  public void test(java.lang.String); 
+}
+</code></pre>
+<h2 id="aar">aar中增加独立的混淆配置</h2>
+<p><code>build.gralde</code></p>
+<pre><code class="language-gradle">android {
+    ···
+    defaultConfig {
+        ···
+        consumerProguardFile 'proguard-rules.pro'
+    }
+    ···
+}
+</code></pre>
+<h2 id="_8">检查混淆和追踪异常</h2>
+<p>开启 Proguard 功能，则每次构建时 ProGuard 都会输出下列文件：</p>
+<ul>
+<li>
+<p>dump.txt<br />
+说明 APK 中所有类文件的内部结构。</p>
+</li>
+<li>
+<p>mapping.txt<br />
+提供原始与混淆过的类、方法和字段名称之间的转换。</p>
+</li>
+<li>
+<p>seeds.txt<br />
+列出未进行混淆的类和成员。</p>
+</li>
+<li>
+<p>usage.txt<br />
+列出从 APK 移除的代码。</p>
+</li>
+</ul>
+<p>这些文件保存在 /build/outputs/mapping/release/ 中。我们可以查看 seeds.txt 里面是否是我们需要保留的，以及 usage.txt 里查看是否有误删除的代码。 mapping.txt 文件很重要，由于我们的部分代码是经过重命名的，如果该部分出现 bug，对应的异常堆栈信息里的类或成员也是经过重命名的，难以定位问题。我们可以用 retrace 脚本（在 Windows 上为 retrace.bat；在 Mac/Linux 上为 retrace.sh）。它位于 /tools/proguard/ 目录中。该脚本利用 mapping.txt 文件和你的异常堆栈文件生成没有经过混淆的异常堆栈文件,这样就可以看清是哪里出问题了。使用 retrace 工具的语法如下：</p>
+<pre><code class="language-shell">retrace.bat|retrace.sh [-verbose] mapping.txt [&lt;stacktrace_file&gt;]
+</code></pre>
+<h1 id="_9">架构</h1>
+<h2 id="mvc">MVC</h2>
+<p><img alt="" src="https://mmbiz.qpic.cn/mmbiz_png/zKFJDM5V3Wy5xbLTp6JMMdouZiavFxyYCwLhGyLdicyLzgUDKFTZVt1OgU6iaSx2IUwnygzmQzW7Renaa8hmQ62cQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" /></p>
+<p>在 Android 中，三者的关系如下：</p>
+<p><img alt="" src="https://mmbiz.qpic.cn/mmbiz_png/zKFJDM5V3Wy5xbLTp6JMMdouZiavFxyYCicNvEVMO9vDgukUR29Z1DCacZJwmmH1EEb7gUOZmDxolWexP01O8jfg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" /></p>
+<p>由于在 Android 中 xml 布局的功能性太弱，所以 Activity 承担了绝大部分的工作，所以在 Android 中 mvc 更像：</p>
+<p><img alt="" src="https://mmbiz.qpic.cn/mmbiz_png/zKFJDM5V3Wy5xbLTp6JMMdouZiavFxyYCOq89MLQX4UM3dgBTQfU72desHb1XbOWRQZINnXOCCdZCuicUiaTHhtEg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" /></p>
+<p>总结：
+- 具有一定的分层，model 解耦，controller 和 view 并没有解耦
+- controller 和 view 在 Android 中无法做到彻底分离，Controller 变得臃肿不堪
+- 易于理解、开发速度快、可维护性高</p>
+<h2 id="mvp">MVP</h2>
+<p><img alt="" src="https://mmbiz.qpic.cn/mmbiz_png/zKFJDM5V3Wy5xbLTp6JMMdouZiavFxyYCLVgibsuVQFguBI8FBdZibLNfpvbpd6njkdGWdyR2UL6TzMOhKHFqLC0Q/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" /></p>
+<p>通过引入接口 BaseView，让相应的视图组件如 Activity，Fragment去实现 BaseView，把业务逻辑放在 presenter 层中，弱化 Model 只有跟 view 相关的操作都由 View 层去完成。</p>
+<p>总结：
+- 彻底解决了 MVC 中 View 和 Controller 傻傻分不清楚的问题
+- 但是随着业务逻辑的增加，一个页面可能会非常复杂，UI 的改变是非常多，会有非常多的 case，这样就会造成 View 的接口会很庞大
+- 更容易单元测试</p>
+<h2 id="mvvm">MVVM</h2>
+<p><img alt="" src="https://mmbiz.qpic.cn/mmbiz_png/zKFJDM5V3Wy5xbLTp6JMMdouZiavFxyYCMygIDD6xo5djkq6Y3jZo53sT2A4kKNaz8JEVRwmUnTmcAwJm0pZVWg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" /></p>
+<p>在 MVP 中 View 和 Presenter 要相互持有，方便调用对方，而在 MVP 中 View 和 ViewModel 通过 Binding 进行关联，他们之前的关联处理通过  DataBinding 完成。</p>
+<p>总结：
+- 很好的解决了 MVC 和 MVP 的问题
+- 视图状态较多，ViewModel 的构建和维护的成本都会比较高
+- 但是由于数据和视图的双向绑定，导致出现问题时不太好定位来源</p>
+<h1 id="jetpack">Jetpack</h1>
+<h2 id="_10">架构</h2>
+<p><img alt="" src="https://developer.android.google.cn/topic/libraries/architecture/images/final-architecture.png" /></p>
+<h2 id="_11">使用示例</h2>
+<p><code>build.gradle</code></p>
+<pre><code class="language-groovy">android {
+    ···
+    dataBinding {
+        enabled = true
+    }
+}
+dependencies {
+    ···
+    implementation &quot;androidx.fragment:fragment-ktx:$rootProject.fragmentVersion&quot;
+    implementation &quot;androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion&quot;
+    implementation &quot;androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycleVersion&quot;
+    implementation &quot;androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion&quot;
+}
+</code></pre>
+<p><code>fragment_plant_detail.xml</code></p>
+<pre><code class="language-xml">&lt;layout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;&gt;
+
+    &lt;data&gt;
+        &lt;variable
+            name=&quot;viewModel&quot;
+            type=&quot;com.google.samples.apps.sunflower.viewmodels.PlantDetailViewModel&quot; /&gt;
+    &lt;/data&gt;
+
+    &lt;androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;&gt;
+
+        &lt;TextView
+            ···
+            android:text=&quot;@{viewModel.plant.name}&quot;/&gt;
+
+    &lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;
+&lt;/layout&gt;
+</code></pre>
+<p><code>PlantDetailFragment.kt</code></p>
+<pre><code class="language-kotlin">class PlantDetailFragment : Fragment() {
+
+    private val args: PlantDetailFragmentArgs by navArgs()
+    private lateinit var shareText: String
+
+    private val plantDetailViewModel: PlantDetailViewModel by viewModels {
+        InjectorUtils.providePlantDetailViewModelFactory(requireActivity(), args.plantId)
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val binding = DataBindingUtil.inflate&lt;FragmentPlantDetailBinding&gt;(
+                inflater, R.layout.fragment_plant_detail, container, false).apply {
+            viewModel = plantDetailViewModel
+            lifecycleOwner = this@PlantDetailFragment
+        }
+
+        plantDetailViewModel.plant.observe(this) { plant -&gt;
+            // 更新相关 UI
+        }
+
+        return binding.root
+    }
+}
+</code></pre>
+<p><code>Plant.kt</code></p>
+<pre><code class="language-kotlin">data class Plant (
+    val name: String
+)
+</code></pre>
+<p><code>PlantDetailViewModel.kt</code></p>
+<pre><code class="language-kotlin">class PlantDetailViewModel(
+    plantRepository: PlantRepository,
+    private val plantId: String
+) : ViewModel() {
+
+    val plant: LiveData&lt;Plant&gt;
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
+    }
+
+    init {
+        plant = plantRepository.getPlant(plantId)
+    }
+}
+</code></pre>
+<p><code>PlantDetailViewModelFactory.kt</code></p>
+<pre><code class="language-kotlin">class PlantDetailViewModelFactory(
+    private val plantRepository: PlantRepository,
+    private val plantId: String
+) : ViewModelProvider.NewInstanceFactory() {
+
+    @Suppress(&quot;UNCHECKED_CAST&quot;)
+    override fun &lt;T : ViewModel&gt; create(modelClass: Class&lt;T&gt;): T {
+        return PlantDetailViewModel(plantRepository, plantId) as T
+    }
+}
+</code></pre>
+<p><code>InjectorUtils.kt</code></p>
+<pre><code class="language-kotlin">object InjectorUtils {
+    private fun getPlantRepository(context: Context): PlantRepository {
+        ···
+    }
+
+    fun providePlantDetailViewModelFactory(
+        context: Context,
+        plantId: String
+    ): PlantDetailViewModelFactory {
+        return PlantDetailViewModelFactory(getPlantRepository(context), plantId)
+    }
+}
+</code></pre>
+<h1 id="ndk">NDK 开发</h1>
+<blockquote>
+<p>NDK 全称是 Native Development Kit，是一组可以让你在 Android 应用中编写实现 C/C++ 的工具，可以在项目用自己写源代码构建，也可以利用现有的预构建库。</p>
+</blockquote>
+<p>使用 NDK 的使用目的有：
+- 从设备获取更好的性能以用于计算密集型应用，例如游戏或物理模拟<br />
+- 重复使用自己或其他开发者的 C/C++ 库，便利于跨平台。<br />
+- NDK 集成了譬如 OpenSL、Vulkan 等 API 规范的特定实现，以实现在 java 层无法做到的功能如提升音频性能等<br />
+- 增加反编译难度</p>
+<h2 id="jni">JNI 基础</h2>
+<h3 id="_12">数据类型</h3>
+<ul>
+<li>基本数据类型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Java 类型</th>
+<th>Native 类型</th>
+<th>符号属性</th>
+<th>字长</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>jboolean</td>
+<td>无符号</td>
+<td>8位</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>jbyte</td>
+<td>无符号</td>
+<td>8位</td>
+</tr>
+<tr>
+<td>char</td>
+<td>jchar</td>
+<td>无符号</td>
+<td>16位</td>
+</tr>
+<tr>
+<td>short</td>
+<td>jshort</td>
+<td>有符号</td>
+<td>16位</td>
+</tr>
+<tr>
+<td>int</td>
+<td>jnit</td>
+<td>有符号</td>
+<td>32位</td>
+</tr>
+<tr>
+<td>long</td>
+<td>jlong</td>
+<td>有符号</td>
+<td>64位</td>
+</tr>
+<tr>
+<td>float</td>
+<td>jfloat</td>
+<td>有符号</td>
+<td>32位</td>
+</tr>
+<tr>
+<td>double</td>
+<td>jdouble</td>
+<td>有符号</td>
+<td>64位</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>引用数据类型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Java 引用类型</th>
+<th>Native 类型</th>
+<th>Java 引用类型</th>
+<th>Native 类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All objects</td>
+<td>jobject</td>
+<td>char[]</td>
+<td>jcharArray</td>
+</tr>
+<tr>
+<td>java.lang.Class</td>
+<td>jclass</td>
+<td>short[]</td>
+<td>jshortArray</td>
+</tr>
+<tr>
+<td>java.lang.String</td>
+<td>jstring</td>
+<td>int[]</td>
+<td>jintArray</td>
+</tr>
+<tr>
+<td>Object[]</td>
+<td>jobjectArray</td>
+<td>long[]</td>
+<td>jlongArray</td>
+</tr>
+<tr>
+<td>boolean[]</td>
+<td>jbooleanArray</td>
+<td>float[]</td>
+<td>jfloatArray</td>
+</tr>
+<tr>
+<td>byte[]</td>
+<td>jbyteArray</td>
+<td>double[]</td>
+<td>jdoubleArray</td>
+</tr>
+<tr>
+<td>java.lang.Throwable</td>
+<td>jthrowable</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="string">String 字符串函数操作</h3>
+<table>
+<thead>
+<tr>
+<th>JNI 函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GetStringChars / ReleaseStringChars</td>
+<td>获得或释放一个指向 Unicode 编码的字符串的指针（指 C/C++ 字符串）</td>
+</tr>
+<tr>
+<td>GetStringUTFChars / ReleaseStringUTFChars</td>
+<td>获得或释放一个指向 UTF-8 编码的字符串的指针（指 C/C++ 字符串）</td>
+</tr>
+<tr>
+<td>GetStringLength</td>
+<td>返回 Unicode 编码的字符串的长度</td>
+</tr>
+<tr>
+<td>getStringUTFLength</td>
+<td>返回 UTF-8 编码的字符串的长度</td>
+</tr>
+<tr>
+<td>NewString</td>
+<td>将 Unicode 编码的 C/C++ 字符串转换为 Java 字符串</td>
+</tr>
+<tr>
+<td>NewStringUTF</td>
+<td>将 UTF-8 编码的 C/C++ 字符串转换为 Java 字符串</td>
+</tr>
+<tr>
+<td>GetStringCritical / ReleaseStringCritical</td>
+<td>获得或释放一个指向字符串内容的指针(指 Java 字符串)</td>
+</tr>
+<tr>
+<td>GetStringRegion</td>
+<td>获取或者设置 Unicode 编码的字符串的指定范围的内容</td>
+</tr>
+<tr>
+<td>GetStringUTFRegion</td>
+<td>获取或者设置 UTF-8 编码的字符串的指定范围的内容</td>
+</tr>
+</tbody>
+</table>
+<h3 id="jni-java">常用 JNI 访问 Java 对象方法</h3>
+<p><code>MyJob.java</code></p>
+<pre><code class="language-java">package com.example.myjniproject;
+
+public class MyJob {
+
+    public static String JOB_STRING = &quot;my_job&quot;;
+    private int jobId;
+
+    public MyJob(int jobId) {
+        this.jobId = jobId;
+    }
+
+    public int getJobId() {
+        return jobId;
+    }
+}
+</code></pre>
+<p><code>native-lib.cpp</code></p>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+
+extern &quot;C&quot;
+JNIEXPORT jint JNICALL
+Java_com_example_myjniproject_MainActivity_getJobId(JNIEnv *env, jobject thiz, jobject job) {
+
+    // 根据实力获取 class 对象
+    jclass jobClz = env-&gt;GetObjectClass(job);
+    // 根据类名获取 class 对象
+    jclass jobClz = env-&gt;FindClass(&quot;com/example/myjniproject/MyJob&quot;);
+
+    // 获取属性 id
+    jfieldID fieldId = env-&gt;GetFieldID(jobClz, &quot;jobId&quot;, &quot;I&quot;);
+    // 获取静态属性 id
+    jfieldID sFieldId = env-&gt;GetStaticFieldID(jobClz, &quot;JOB_STRING&quot;, &quot;Ljava/lang/String;&quot;);
+
+    // 获取方法 id
+    jmethodID methodId = env-&gt;GetMethodID(jobClz, &quot;getJobId&quot;, &quot;()I&quot;);
+    // 获取构造方法 id
+    jmethodID  initMethodId = env-&gt;GetMethodID(jobClz, &quot;&lt;init&gt;&quot;, &quot;(I)V&quot;);
+
+    // 根据对象属性 id 获取该属性值
+    jint id = env-&gt;GetIntField(job, fieldId);
+    // 根据对象方法 id 调用该方法
+    jint id = env-&gt;CallIntMethod(job, methodId);
+
+    // 创建新的对象
+    jobject newJob = env-&gt;NewObject(jobClz, initMethodId, 10);
+
+    return id;
+}
+</code></pre>
+<h2 id="ndk_1">NDK 开发</h2>
+<h3 id="_13">基础开发流程</h3>
+<ul>
+<li>在 java 中声明 native 方法</li>
+</ul>
+<pre><code class="language-java">public class MainActivity extends AppCompatActivity {
+
+    // Used to load the 'native-lib' library on application startup.
+    static {
+        System.loadLibrary(&quot;native-lib&quot;);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Log.d(&quot;MainActivity&quot;, stringFromJNI());
+    }
+
+    private native String stringFromJNI();
+}
+</code></pre>
+<ul>
+<li>在 <code>app/src/main</code> 目录下新建 cpp 目录，新建相关 cpp 文件，实现相关方法（AS 可用快捷键快速生成）</li>
+</ul>
+<p><code>native-lib.cpp</code></p>
+<pre><code>#include &lt;jni.h&gt;
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_myjniproject_MainActivity_stringFromJNI(
+        JNIEnv *env,
+        jobject /* this */) {
+    std::string hello = &quot;Hello from C++&quot;;
+    return env-&gt;NewStringUTF(hello.c_str());
+}
+</code></pre>
+<blockquote>
+<ul>
+<li>函数名的格式遵循遵循如下规则：Java_包名_类名_方法名。</li>
+<li>extern "C" 指定采用 C 语言的命名风格来编译，否则由于 C 与 C++ 风格不同，导致链接时无法找到具体的函数</li>
+<li>JNIEnv*：表示一个指向 JNI 环境的指针，可以通过他来访问 JNI 提供的接口方法</li>
+<li>jobject：表示 java 对象中的 this</li>
+<li>JNIEXPORT 和 JNICALL：JNI 所定义的宏，可以在 jni.h 头文件中查找到</li>
+</ul>
+</blockquote>
+<ul>
+<li>通过 CMake 或者 ndk-build 构建动态库</li>
+</ul>
+<h3 id="systemloadlibrary">System.loadLibrary()</h3>
+<p><code>java/lang/System.java</code>:</p>
+<pre><code class="language-java">@CallerSensitive
+public static void load(String filename) {
+    Runtime.getRuntime().load0(Reflection.getCallerClass(), filename);
+}
+</code></pre>
+<ul>
+<li>调用 <code>Runtime</code> 相关 native 方法</li>
+</ul>
+<p><code>java/lang/Runtime.java</code>:</p>
+<pre><code class="language-java">private static native String nativeLoad(String filename, ClassLoader loader, Class&lt;?&gt; caller);
+</code></pre>
+<ul>
+<li>native 方法的实现如下：</li>
+</ul>
+<p><code>dalvik/vm/native/java_lang_Runtime.cpp</code>:</p>
+<pre><code class="language-cpp">static void Dalvik_java_lang_Runtime_nativeLoad(const u4* args,
+    JValue* pResult)
+{
+    ···
+    bool success;
+
+    assert(fileNameObj != NULL);
+    // 将 Java 的 library path String 转换到 native 的 String
+    fileName = dvmCreateCstrFromString(fileNameObj);
+
+    success = dvmLoadNativeCode(fileName, classLoader, &amp;reason);
+    if (!success) {
+        const char* msg = (reason != NULL) ? reason : &quot;unknown failure&quot;;
+        result = dvmCreateStringFromCstr(msg);
+        dvmReleaseTrackedAlloc((Object*) result, NULL);
+    }
+    ···
+}
+</code></pre>
+<ul>
+<li><code>dvmLoadNativeCode</code> 函数实现如下：</li>
+</ul>
+<p><code>dalvik/vm/Native.cpp</code></p>
+<pre><code class="language-cpp">bool dvmLoadNativeCode(const char* pathName, Object* classLoader,
+        char** detail)
+{
+    SharedLib* pEntry;
+    void* handle;
+    ···
+    *detail = NULL;
+
+    // 如果已经加载过了，则直接返回 true
+    pEntry = findSharedLibEntry(pathName);
+    if (pEntry != NULL) {
+        if (pEntry-&gt;classLoader != classLoader) {
+            ···
+            return false;
+        }
+        ···
+        if (!checkOnLoadResult(pEntry))
+            return false;
+        return true;
+    }
+
+    Thread* self = dvmThreadSelf();
+    ThreadStatus oldStatus = dvmChangeStatus(self, THREAD_VMWAIT);
+    // 把.so mmap 到进程空间，并把 func 等相关信息填充到 soinfo 中
+    handle = dlopen(pathName, RTLD_LAZY);
+    dvmChangeStatus(self, oldStatus);
+    ···
+    // 创建一个新的 entry
+    SharedLib* pNewEntry;
+    pNewEntry = (SharedLib*) calloc(1, sizeof(SharedLib));
+    pNewEntry-&gt;pathName = strdup(pathName);
+    pNewEntry-&gt;handle = handle;
+    pNewEntry-&gt;classLoader = classLoader;
+    dvmInitMutex(&amp;pNewEntry-&gt;onLoadLock);
+    pthread_cond_init(&amp;pNewEntry-&gt;onLoadCond, NULL);
+    pNewEntry-&gt;onLoadThreadId = self-&gt;threadId;
+
+    // 尝试添加到列表中
+    SharedLib* pActualEntry = addSharedLibEntry(pNewEntry);
+
+    if (pNewEntry != pActualEntry) {
+        ···
+        freeSharedLibEntry(pNewEntry);
+        return checkOnLoadResult(pActualEntry);
+    } else {
+        ···
+        bool result = true;
+        void* vonLoad;
+        int version;
+        // 调用该 so 库的 JNI_OnLoad 方法
+        vonLoad = dlsym(handle, &quot;JNI_OnLoad&quot;);
+        if (vonLoad == NULL) {
+            ···
+        } else {
+            // 调用 JNI_Onload 方法，重写类加载器。
+            OnLoadFunc func = (OnLoadFunc)vonLoad;
+            Object* prevOverride = self-&gt;classLoaderOverride;
+
+            self-&gt;classLoaderOverride = classLoader;
+            oldStatus = dvmChangeStatus(self, THREAD_NATIVE);
+            ···
+            version = (*func)(gDvmJni.jniVm, NULL);
+            dvmChangeStatus(self, oldStatus);
+            self-&gt;classLoaderOverride = prevOverride;
+
+            if (version != JNI_VERSION_1_2 &amp;&amp; version != JNI_VERSION_1_4 &amp;&amp;
+                version != JNI_VERSION_1_6)
+            {
+                ···
+                result = false;
+            } else {
+                ···
+            }
+        }
+
+        if (result)
+            pNewEntry-&gt;onLoadResult = kOnLoadOkay;
+        else
+            pNewEntry-&gt;onLoadResult = kOnLoadFailed;
+
+        pNewEntry-&gt;onLoadThreadId = 0;
+
+        // 释放锁资源 
+        dvmLockMutex(&amp;pNewEntry-&gt;onLoadLock);
+        pthread_cond_broadcast(&amp;pNewEntry-&gt;onLoadCond);
+        dvmUnlockMutex(&amp;pNewEntry-&gt;onLoadLock);
+        return result;
+    }
+}
+</code></pre>
+<p>&lt;!-- ### native 方法调用原理
+- 虚拟机调用一个方法时，发现如果这是一个 native 方法，则使用 Method 对象中的nativeFunc 函数指针对象调用。</p>
+<p><code>dalvik2/vm/interp/Stack.cpp</code>:</p>
+<pre><code class="language-cpp">Object* dvmInvokeMethod(Object* obj, const Method* method,
+    ArrayObject* argList, ArrayObject* params, ClassObject* returnType,
+    bool noAccessCheck)
+{
+    ···
+    if (dvmIsNativeMethod(method)) {
+        TRACE_METHOD_ENTER(self, method);
+        (*method-&gt;nativeFunc)((u4*)self-&gt;interpSave.curFrame, &amp;retval, method, self);
+        TRACE_METHOD_EXIT(self, method);
+    } else {
+        dvmInterpret(self, method, &amp;retval);
+    }
+    ···
+}
+​``` --&gt;
+
+## CMake 构建 NDK 项目
+&gt; CMake 是一个开源的跨平台工具系列，旨在构建，测试和打包软件，从 Android Studio 2.2 开始，Android Sudio 默认地使用 CMake 与 Gradle 搭配使用来构建原生库。
+
+启动方式只需要在 ``app/build.gradle`` 中添加相关：
+​```groovy
+android {
+    ···
+    defaultConfig {
+        ···
+        externalNativeBuild {
+            cmake {
+                cppFlags &quot;&quot;
+            }
+        }
+
+        ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a'
+        }
+    }
+    ···
+    externalNativeBuild {
+        cmake {
+            path &quot;CMakeLists.txt&quot;
+        }
+    }
+}
+</code></pre>
+<p>然后在对应目录新建一个 <code>CMakeLists.txt</code> 文件：</p>
+<pre><code class="language-txt"># 定义了所需 CMake 的最低版本
+cmake_minimum_required(VERSION 3.4.1)
+
+# add_library() 命令用来添加库
+# native-lib 对应着生成的库的名字
+# SHARED 代表为分享库
+# src/main/cpp/native-lib.cpp 则是指明了源文件的路径。
+add_library( # Sets the name of the library.
+        native-lib
+
+        # Sets the library as a shared library.
+        SHARED
+
+        # Provides a relative path to your source file(s).
+        src/main/cpp/native-lib.cpp)
+
+# find_library 命令添加到 CMake 构建脚本中以定位 NDK 库，并将其路径存储为一个变量。
+# 可以使用此变量在构建脚本的其他部分引用 NDK 库
+find_library( # Sets the name of the path variable.
+        log-lib
+
+        # Specifies the name of the NDK library that
+        # you want CMake to locate.
+        log)
+
+# 预构建的 NDK 库已经存在于 Android 平台上，因此，无需再构建或将其打包到 APK 中。
+# 由于 NDK 库已经是 CMake 搜索路径的一部分，只需要向 CMake 提供希望使用的库的名称，并将其关联到自己的原生库中
+
+# 要将预构建库关联到自己的原生库
+target_link_libraries( # Specifies the target library.
+        native-lib
+
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib})
+···
+</code></pre>
+<ul>
+<li><a href="https://cmake.org/cmake/help/latest/manual/cmake-commands.7.html">CMake 命令详细信息文档</a></li>
+</ul>
+<h2 id="android-ndk-api">常用的 Android NDK 原生 API</h2>
+<table>
+<thead>
+<tr>
+<th>支持 NDK 的 API 级别</th>
+<th>关键原生 API</th>
+<th>包括</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>Java 原生接口</td>
+<td>#include <jni.h></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Android 日志记录 API</td>
+<td>#include <android/log.h></td>
+</tr>
+<tr>
+<td>5</td>
+<td>OpenGL ES 2.0</td>
+<td>#include <GLES2/gl2.h><br>#include <GLES2/gl2ext.h></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Android 位图 API</td>
+<td>#include <android/bitmap.h></td>
+</tr>
+<tr>
+<td>9</td>
+<td>OpenSL ES</td>
+<td>#include <SLES/OpenSLES.h><br>#include <SLES/OpenSLES_Platform.h><br>#include <SLES/OpenSLES_Android.h><br>#include <SLES/OpenSLES_AndroidConfiguration.h></td>
+</tr>
+<tr>
+<td>9</td>
+<td>原生应用 API</td>
+<td>#include <android/rect.h><br>#include <android/window.h><br>#include<android/native_activity.h><br>···</td>
+</tr>
+<tr>
+<td>18</td>
+<td>OpenGL ES 3.0</td>
+<td>#include <GLES3/gl3.h><br>#include <GLES3/gl3ext.h></td>
+</tr>
+<tr>
+<td>21</td>
+<td>原生媒体 API</td>
+<td>#include <media/NdkMediaCodec.h><br>#include <media/NdkMediaCrypto.h><br>···</td>
+</tr>
+<tr>
+<td>24</td>
+<td>原生相机 API</td>
+<td>#include <camera/NdkCameraCaptureSession.h><br>#include <camera/NdkCameraDevice.h><br>···</td>
+</tr>
+<tr>
+<td>···</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="_14">类加载器</h1>
+<p><img alt="" src="https://img-blog.csdn.net/20161021101447117?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" /></p>
+<h2 id="_15">双亲委托模式</h2>
+<p>某个特定的类加载器在接到加载类的请求时，首先将加载任务委托给父类加载器，依次递归，如果父类加载器可以完成类加载任务，就成功返回；只有父类加载器无法完成此加载任务时，才自己去加载。</p>
+<p>因为这样可以避免重复加载，当父亲已经加载了该类的时候，就没有必要子 ClassLoader 再加载一次。如果不使用这种委托模式，那我们就可以随时使用自定义的类来动态替代一些核心的类，存在非常大的安全隐患。</p>
+<h2 id="dexpathlist">DexPathList</h2>
+<p>DexClassLoader 重载了 <code>findClass</code> 方法，在加载类时会调用其内部的 DexPathList 去加载。DexPathList 是在构造 DexClassLoader 时生成的，其内部包含了 DexFile。</p>
+<p><code>DexPathList.java</code></p>
+<pre><code class="language-java">···
+public Class findClass(String name) {
+    for (Element element : dexElements) {
+        DexFile dex = element.dexFile;
+        if (dex != null) {
+            Class clazz = dex.loadClassBinaryName(name, definingContext);
+            if (clazz != null) {
+                return clazz;
+            }
+        }
+    }
+    return null;
+}
+···
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
