@@ -1,0 +1,2849 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>常见面试算法题汇总 - koala</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">koala</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Java <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../Java/Java%E6%B5%81/" class="dropdown-item">Java流</a>
+</li>
+                                    
+<li>
+    <a href="../../../../Java/Java%E7%BC%96%E7%A0%81/" class="dropdown-item">Java编码</a>
+</li>
+                                    
+<li>
+    <a href="../../../../Java/LocalDateTime%E5%A4%84%E7%90%86/" class="dropdown-item">LocalDateTime处理</a>
+</li>
+                                    
+<li>
+    <a href="../../../../Java/%E5%8F%8D%E5%B0%84/" class="dropdown-item">反射</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">加密算法</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../Java/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/%E5%85%A5%E9%97%A8/" class="dropdown-item">入门</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">多线程</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/ThreadLoacl/" class="dropdown-item">ThreadLoacl</a>
+</li>
+            
+<li>
+    <a href="../../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/volatile/" class="dropdown-item">Volatile</a>
+</li>
+            
+<li>
+    <a href="../../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-notion/" class="dropdown-item">并发编程 notion</a>
+</li>
+            
+<li>
+    <a href="../../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" class="dropdown-item">并发编程</a>
+</li>
+            
+<li>
+    <a href="../../../../Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E8%8D%89%E7%A8%BF/" class="dropdown-item">草稿</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PC端 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../PC%E7%AB%AF/electron/" class="dropdown-item">Electron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Android <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/" class="dropdown-item">代码模板</a>
+</li>
+                                    
+<li>
+    <a href="../../../%E5%AE%89%E5%8D%93%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="dropdown-item">安卓基础学习笔记</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android Notes</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Android%E5%BC%80%E6%BA%90%E5%BA%93%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" class="dropdown-item">Android开源库源码分析</a>
+</li>
+            
+<li>
+    <a href="../Android%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86%E7%82%B9/" class="dropdown-item">Android扩展知识点</a>
+</li>
+            
+<li>
+    <a href="../Android%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Android知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../C%2B%2B%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">C++知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../Framework%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Framework知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../Gradle%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">依赖项配置</a>
+</li>
+            
+<li>
+    <a href="../Java%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Java知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../Kotlin%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">Kotlin知识点汇总</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">常见面试算法题汇总</a>
+</li>
+            
+<li>
+    <a href="../%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">性能优化知识点汇总</a>
+</li>
+            
+<li>
+    <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" class="dropdown-item">计算机网络基础</a>
+</li>
+            
+<li>
+    <a href="../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%B1%87%E6%80%BB/" class="dropdown-item">设计模式汇总</a>
+</li>
+            
+<li>
+    <a href="../%E9%9F%B3%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="dropdown-item">音视频知识点汇总</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android framework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../android%20framework/%E5%AD%A6%E4%B9%A0%E5%87%86%E5%88%99/" class="dropdown-item">学习准则</a>
+</li>
+            
+<li>
+    <a href="../../../android%20framework/%E6%9D%82%E4%B9%B1%E7%AC%94%E8%AE%B0/" class="dropdown-item">杂乱笔记</a>
+</li>
+            
+<li>
+    <a href="../../../android%20framework/%E6%9E%B6%E6%9E%84/" class="dropdown-item">架构</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Liunx <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../liunx/git%20%E5%91%BD%E4%BB%A4/" class="dropdown-item">Git 命令</a>
+</li>
+                                    
+<li>
+    <a href="../../../../liunx/jenkins/" class="dropdown-item">Jenkins</a>
+</li>
+                                    
+<li>
+    <a href="../../../../liunx/yum%20%E5%91%BD%E4%BB%A4/" class="dropdown-item">Yum 命令</a>
+</li>
+                                    
+<li>
+    <a href="../../../../liunx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="dropdown-item">常用命令</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../python/QT5/" class="dropdown-item">QT5</a>
+</li>
+                                    
+<li>
+    <a href="../../../../python/numpy/" class="dropdown-item">Numpy</a>
+</li>
+                                    
+<li>
+    <a href="../../../../python/turtle/" class="dropdown-item">Turtle</a>
+</li>
+                                    
+<li>
+    <a href="../../../../python/%E6%95%A3%E4%B9%B1%E7%9F%A5%E8%AF%86/" class="dropdown-item">散乱知识</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Socket <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../socket/socket%20%E8%8D%89%E7%A8%BF/" class="dropdown-item">Socket 草稿</a>
+</li>
+                                    
+<li>
+    <a href="../../../../socket/socket%20%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5%E6%91%98%E8%A6%81/" class="dropdown-item">Socket 重要概念摘要</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Srping 系列 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/security/Oauth2%20%E5%9B%9B%E7%A7%8D%E6%8E%88%E6%9D%83%E6%A8%A1%E5%BC%8F/" class="dropdown-item">Oauth2 四种授权模式</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/security/Q%26A/" class="dropdown-item">Q&A</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/security/demo%20%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E5%AD%A6%E4%B9%A0/" class="dropdown-item">Demo 项目搭建学习</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/security/token%20%E7%B3%BB%E5%88%97%E7%9F%A5%E8%AF%86/" class="dropdown-item">Token 系列知识</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/security/%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/" class="dropdown-item">参考文档</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/security/%E6%8E%88%E6%9D%83%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="dropdown-item">授权服务器配置</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">详解</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/security/%E8%AF%A6%E8%A7%A3/TokenStore/" class="dropdown-item">TokenStore</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">开发问题详解</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/mybatis-plus/" class="dropdown-item">Mybatis plus</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/sql%E8%AF%AD%E5%8F%A5/" class="dropdown-item">Sql语句</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E4%BC%A0%E5%8F%82%E6%95%B0/" class="dropdown-item">传参数</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/" class="dropdown-item">切面编程</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%8F%82%E6%95%B0%E6%95%88%E9%AA%8C/" class="dropdown-item">参数效验</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%BC%80%E5%8F%91%E6%A6%82%E5%8F%99/" class="dropdown-item">开发概叙</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F/" class="dropdown-item">开发注意</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E6%95%88%E9%AA%8C/" class="dropdown-item">效验</a>
+</li>
+            
+<li>
+    <a href="../../../../srping%20%E7%B3%BB%E5%88%97/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/%E8%A7%84%E8%8C%83%E9%97%AE%E9%A2%98/" class="dropdown-item">规范问题</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Es</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/es/ElasticSearch%207.14/" class="dropdown-item">ElasticSearch 7.14-分布式搜索引擎</a>
+</li>
+            
+<li>
+    <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/es/es/" class="dropdown-item">Es</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Nacos</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/nacos/KubeSphere%20%E9%83%A8%E7%BD%B2%20nacos/" class="dropdown-item">KubeSphere 部署 nacos</a>
+</li>
+            
+<li>
+    <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/nacos/nacos%E5%91%BD%E4%BB%A4/" class="dropdown-item">Nacos命令</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">消息队列</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RocketMQ%E5%85%A8%E6%99%AF%E5%9B%BE/" class="dropdown-item">RocketMQ全景图</a>
+</li>
+            
+<li>
+    <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketMQ%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="dropdown-item">rocketMQ 官方文档阅读笔记</a>
+</li>
+            
+<li>
+    <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketmq%20%E5%9F%BA%E6%9C%AC%E6%A0%B7%E4%BE%8B/" class="dropdown-item">Rocketmq 基本样例</a>
+</li>
+            
+<li>
+    <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/rocketmq%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%BD%BF%E7%94%A8/" class="dropdown-item">Rocketmq 控制台使用</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">云原生 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubemetes%E5%91%BD%E4%BB%A4/" class="dropdown-item">Kubemetes命令</a>
+</li>
+                                    
+<li>
+    <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubesphere/" class="dropdown-item">Kubesphere</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DevOps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/DevOps/DevOps/" class="dropdown-item">DevOps</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Docker</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker%20%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" class="dropdown-item">Docker 命令大全</a>
+</li>
+            
+<li>
+    <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker%20%E6%A1%88%E4%BE%8B/" class="dropdown-item">Docker 案例</a>
+</li>
+            
+<li>
+    <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/k8s%E5%91%BD%E4%BB%A4/" class="dropdown-item">K8s命令</a>
+</li>
+            
+<li>
+    <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/%E9%97%AE%E9%A2%98/" class="dropdown-item">问题</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发常见问题 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/mybatis%20%E7%BC%96%E5%86%99/" class="dropdown-item">Mybatis 编写</a>
+</li>
+                                    
+<li>
+    <a href="../../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%AE%9E%E4%BD%93%E7%B1%BB/" class="dropdown-item">实体类</a>
+</li>
+                                    
+<li>
+    <a href="../../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9A%E4%B9%89/" class="dropdown-item">数据库定义</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">解决方案</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E9%99%90%E5%88%B6%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%A7%E5%B0%8F/" class="dropdown-item">限制文件上传大小</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开源项目 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90/" class="dropdown-item">参与开源</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">微服务 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/K8S%20%E5%85%A5%E9%97%A8/" class="dropdown-item">K8S 入门</a>
+</li>
+                                    
+<li>
+    <a href="../../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/NACOS%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="dropdown-item">NACOS 基础知识</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Spring cloud</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/spring-cloud%20%E5%AD%A6%E4%B9%A0/" class="dropdown-item">Spring cloud 学习</a>
+</li>
+            
+<li>
+    <a href="../../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/%E7%BD%91%E5%85%B3/" class="dropdown-item">网关</a>
+</li>
+            
+<li>
+    <a href="../../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1/spring-cloud/%E7%BD%91%E5%85%B3%E9%9B%86%E6%88%90Oauth2%E8%AF%A6%E8%A7%A3/" class="dropdown-item">网关集成Oauth2详解</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">数据库 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mybatis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mybatis/mybatis%20%E5%85%A8%E8%A7%A3/" class="dropdown-item">使用案例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mybatis plus</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mybatis-plus/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E8%AF%A6%E8%A7%A3/" class="dropdown-item">官方文档详解</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mysql</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="dropdown-item">Mysql 常用命令</a>
+</li>
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%20%E7%B4%A2%E5%BC%95%E7%AF%87/" class="dropdown-item">Mysql 索引篇</a>
+</li>
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%B2%97%E8%AF%BB/" class="dropdown-item">Mysql官方文档粗读</a>
+</li>
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E7%BC%96%E7%A8%8B/" class="dropdown-item">Mysql编程</a>
+</li>
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E8%AF%A6%E8%A7%A3/" class="dropdown-item">Mysql详解</a>
+</li>
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E9%97%AE%E9%A2%98%E5%A4%A7%E5%85%A8/" class="dropdown-item">Mysql问题大全</a>
+</li>
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/readme/" class="dropdown-item">Readme</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mysql45讲</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql45%E8%AE%B2/Info/" class="dropdown-item">Info</a>
+</li>
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql45%E8%AE%B2/%E6%97%A5%E5%BF%97/" class="dropdown-item">日志</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Redis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%20%E5%9F%BA%E7%A1%80%E6%96%87%E6%A1%A3/" class="dropdown-item">Redis 基础文档</a>
+</li>
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%AC%94%E8%AE%B0/" class="dropdown-item">Redis 官方文档笔记</a>
+</li>
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/%E5%8E%9F%E7%94%9F%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/" class="dropdown-item">原生分布式锁实现方式</a>
+</li>
+            
+<li>
+    <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/redis/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="dropdown-item">常见问题</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">社招面试 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../%E7%A4%BE%E6%8B%9B%E9%9D%A2%E8%AF%95/%E5%8F%82%E8%80%83/" class="dropdown-item">参考</a>
+</li>
+                                    
+<li>
+    <a href="../../../../%E7%A4%BE%E6%8B%9B%E9%9D%A2%E8%AF%95/%E6%9D%82%E9%A1%B9/" class="dropdown-item">杂项</a>
+</li>
+                                    
+<li>
+    <a href="../../../../%E7%A4%BE%E6%8B%9B%E9%9D%A2%E8%AF%95/%E9%A9%AC%E5%A3%AB%E5%85%B5%E9%9D%A2%E8%AF%95%E8%A7%86%E9%A2%912023/" class="dropdown-item">马士兵面试视频2023</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">设计模式 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/" class="dropdown-item">模板模式</a>
+</li>
+                                    
+<li>
+    <a href="../../../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/" class="dropdown-item">观察者模式</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Kotlin%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">排序</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">比较排序</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">线性排序</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_9" class="nav-link">二叉树</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">顺序遍历</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">层次遍历</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_12" class="nav-link">左右翻转</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">最大值</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_14" class="nav-link">最大深度</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_15" class="nav-link">最小深度</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_16" class="nav-link">平衡二叉树</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_17" class="nav-link">链表</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_18" class="nav-link">删除节点</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_19" class="nav-link">翻转链表</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_20" class="nav-link">中间元素</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_21" class="nav-link">判断是否为循环链表</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_22" class="nav-link">合并两个已排序链表</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_23" class="nav-link">链表排序</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#n" class="nav-link">删除倒数第N个节点</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_24" class="nav-link">两个链表是否相交</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_25" class="nav-link">栈 / 队列</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_26" class="nav-link">带最小值操作的栈</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_27" class="nav-link">有效括号</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_28" class="nav-link">用栈实现队列</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_29" class="nav-link">逆波兰表达式求值</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_30" class="nav-link">二分</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_31" class="nav-link">二分搜索</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#x" class="nav-link">X的平方根</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_32" class="nav-link">哈希表</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_33" class="nav-link">两数之和</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_34" class="nav-link">连续数组</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_35" class="nav-link">最长无重复字符的子串</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_36" class="nav-link">最多点在一条直线上</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_37" class="nav-link">堆 / 优先队列</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#k" class="nav-link">前K大的数</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#kii" class="nav-link">前K大的数II</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#k_1" class="nav-link">第K大的数</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_38" class="nav-link">二叉搜索树</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_39" class="nav-link">验证二叉搜索树</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#k_2" class="nav-link">第K小的元素</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_40" class="nav-link">数组 / 双指针</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_41" class="nav-link">加一</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_42" class="nav-link">删除元素</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_43" class="nav-link">删除排序数组中的重复数字</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#i" class="nav-link">我的日程安排表 I</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_44" class="nav-link">合并排序数组</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_45" class="nav-link">贪心</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_46" class="nav-link">买卖股票的最佳时机</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ii" class="nav-link">买卖股票的最佳时机 II</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_47" class="nav-link">最大子数组</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_48" class="nav-link">主元素</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_49" class="nav-link">字符串处理</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_50" class="nav-link">生成括号</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#excel" class="nav-link">Excel表列标题</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_51" class="nav-link">翻转游戏</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_52" class="nav-link">翻转字符串中的单词</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_53" class="nav-link">转换字符串到整数</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_54" class="nav-link">最长公共前缀</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_55" class="nav-link">回文数</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_56" class="nav-link">动态规划</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_57" class="nav-link">单词拆分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_58" class="nav-link">爬楼梯</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_59" class="nav-link">打劫房屋</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_60" class="nav-link">编辑距离</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_61" class="nav-link">乘积最大子序列</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_62" class="nav-link">矩阵</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_63" class="nav-link">螺旋矩阵</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_64" class="nav-link">判断数独是否合法</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_65" class="nav-link">旋转图像</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_66" class="nav-link">二进制 / 位运算</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_67" class="nav-link">落单的数</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_68" class="nav-link">格雷编码</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_69" class="nav-link">其他</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_70" class="nav-link">反转整数</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lru" class="nav-link">LRU缓存策略</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<ul>
+<li><a href="#%e6%8e%92%e5%ba%8f">排序</a></li>
+<li><a href="#%e6%af%94%e8%be%83%e6%8e%92%e5%ba%8f">比较排序</a><ul>
+<li><a href="#%e5%86%92%e6%b3%a1%e6%8e%92%e5%ba%8f">冒泡排序</a></li>
+<li><a href="#%e5%bd%92%e5%b9%b6%e6%8e%92%e5%ba%8f">归并排序</a></li>
+<li><a href="#%e5%bf%ab%e9%80%9f%e6%8e%92%e5%ba%8f">快速排序</a></li>
+</ul>
+</li>
+<li><a href="#%e7%ba%bf%e6%80%a7%e6%8e%92%e5%ba%8f">线性排序</a><ul>
+<li><a href="#%e8%ae%a1%e6%95%b0%e6%8e%92%e5%ba%8f">计数排序</a></li>
+<li><a href="#%e6%a1%b6%e6%8e%92%e5%ba%8f">桶排序</a></li>
+</ul>
+</li>
+<li><a href="#%e4%ba%8c%e5%8f%89%e6%a0%91">二叉树</a></li>
+<li><a href="#%e9%a1%ba%e5%ba%8f%e9%81%8d%e5%8e%86">顺序遍历</a></li>
+<li><a href="#%e5%b1%82%e6%ac%a1%e9%81%8d%e5%8e%86">层次遍历</a></li>
+<li><a href="#%e5%b7%a6%e5%8f%b3%e7%bf%bb%e8%bd%ac">左右翻转</a></li>
+<li><a href="#%e6%9c%80%e5%a4%a7%e5%80%bc">最大值</a></li>
+<li><a href="#%e6%9c%80%e5%a4%a7%e6%b7%b1%e5%ba%a6">最大深度</a></li>
+<li><a href="#%e6%9c%80%e5%b0%8f%e6%b7%b1%e5%ba%a6">最小深度</a></li>
+<li><a href="#%e5%b9%b3%e8%a1%a1%e4%ba%8c%e5%8f%89%e6%a0%91">平衡二叉树</a></li>
+<li><a href="#%e9%93%be%e8%a1%a8">链表</a></li>
+<li><a href="#%e5%88%a0%e9%99%a4%e8%8a%82%e7%82%b9">删除节点</a></li>
+<li><a href="#%e7%bf%bb%e8%bd%ac%e9%93%be%e8%a1%a8">翻转链表</a></li>
+<li><a href="#%e4%b8%ad%e9%97%b4%e5%85%83%e7%b4%a0">中间元素</a></li>
+<li><a href="#%e5%88%a4%e6%96%ad%e6%98%af%e5%90%a6%e4%b8%ba%e5%be%aa%e7%8e%af%e9%93%be%e8%a1%a8">判断是否为循环链表</a></li>
+<li><a href="#%e5%90%88%e5%b9%b6%e4%b8%a4%e4%b8%aa%e5%b7%b2%e6%8e%92%e5%ba%8f%e9%93%be%e8%a1%a8">合并两个已排序链表</a></li>
+<li><a href="#%e9%93%be%e8%a1%a8%e6%8e%92%e5%ba%8f">链表排序</a></li>
+<li><a href="#%e5%88%a0%e9%99%a4%e5%80%92%e6%95%b0%e7%ac%acn%e4%b8%aa%e8%8a%82%e7%82%b9">删除倒数第N个节点</a></li>
+<li><a href="#%e4%b8%a4%e4%b8%aa%e9%93%be%e8%a1%a8%e6%98%af%e5%90%a6%e7%9b%b8%e4%ba%a4">两个链表是否相交</a></li>
+<li><a href="#%e6%a0%88--%e9%98%9f%e5%88%97">栈 / 队列</a></li>
+<li><a href="#%e5%b8%a6%e6%9c%80%e5%b0%8f%e5%80%bc%e6%93%8d%e4%bd%9c%e7%9a%84%e6%a0%88">带最小值操作的栈</a></li>
+<li><a href="#%e6%9c%89%e6%95%88%e6%8b%ac%e5%8f%b7">有效括号</a></li>
+<li><a href="#%e7%94%a8%e6%a0%88%e5%ae%9e%e7%8e%b0%e9%98%9f%e5%88%97">用栈实现队列</a></li>
+<li><a href="#%e9%80%86%e6%b3%a2%e5%85%b0%e8%a1%a8%e8%be%be%e5%bc%8f%e6%b1%82%e5%80%bc">逆波兰表达式求值</a></li>
+<li><a href="#%e4%ba%8c%e5%88%86">二分</a></li>
+<li><a href="#%e4%ba%8c%e5%88%86%e6%90%9c%e7%b4%a2">二分搜索</a></li>
+<li><a href="#x%e7%9a%84%e5%b9%b3%e6%96%b9%e6%a0%b9">X的平方根</a></li>
+<li><a href="#%e5%93%88%e5%b8%8c%e8%a1%a8">哈希表</a></li>
+<li><a href="#%e4%b8%a4%e6%95%b0%e4%b9%8b%e5%92%8c">两数之和</a></li>
+<li><a href="#%e8%bf%9e%e7%bb%ad%e6%95%b0%e7%bb%84">连续数组</a></li>
+<li><a href="#%e6%9c%80%e9%95%bf%e6%97%a0%e9%87%8d%e5%a4%8d%e5%ad%97%e7%ac%a6%e7%9a%84%e5%ad%90%e4%b8%b2">最长无重复字符的子串</a></li>
+<li><a href="#%e6%9c%80%e5%a4%9a%e7%82%b9%e5%9c%a8%e4%b8%80%e6%9d%a1%e7%9b%b4%e7%ba%bf%e4%b8%8a">最多点在一条直线上</a></li>
+<li><a href="#%e5%a0%86--%e4%bc%98%e5%85%88%e9%98%9f%e5%88%97">堆 / 优先队列</a></li>
+<li><a href="#%e5%89%8dk%e5%a4%a7%e7%9a%84%e6%95%b0">前K大的数</a></li>
+<li><a href="#%e5%89%8dk%e5%a4%a7%e7%9a%84%e6%95%b0ii">前K大的数II</a></li>
+<li><a href="#%e7%ac%ack%e5%a4%a7%e7%9a%84%e6%95%b0">第K大的数</a></li>
+<li><a href="#%e4%ba%8c%e5%8f%89%e6%90%9c%e7%b4%a2%e6%a0%91">二叉搜索树</a></li>
+<li><a href="#%e9%aa%8c%e8%af%81%e4%ba%8c%e5%8f%89%e6%90%9c%e7%b4%a2%e6%a0%91">验证二叉搜索树</a></li>
+<li><a href="#%e7%ac%ack%e5%b0%8f%e7%9a%84%e5%85%83%e7%b4%a0">第K小的元素</a></li>
+<li><a href="#%e6%95%b0%e7%bb%84--%e5%8f%8c%e6%8c%87%e9%92%88">数组 / 双指针</a></li>
+<li><a href="#%e5%8a%a0%e4%b8%80">加一</a></li>
+<li><a href="#%e5%88%a0%e9%99%a4%e5%85%83%e7%b4%a0">删除元素</a></li>
+<li><a href="#%e5%88%a0%e9%99%a4%e6%8e%92%e5%ba%8f%e6%95%b0%e7%bb%84%e4%b8%ad%e7%9a%84%e9%87%8d%e5%a4%8d%e6%95%b0%e5%ad%97">删除排序数组中的重复数字</a></li>
+<li><a href="#%e6%88%91%e7%9a%84%e6%97%a5%e7%a8%8b%e5%ae%89%e6%8e%92%e8%a1%a8-i">我的日程安排表 I</a></li>
+<li><a href="#%e5%90%88%e5%b9%b6%e6%8e%92%e5%ba%8f%e6%95%b0%e7%bb%84">合并排序数组</a></li>
+<li><a href="#%e8%b4%aa%e5%bf%83">贪心</a></li>
+<li><a href="#%e4%b9%b0%e5%8d%96%e8%82%a1%e7%a5%a8%e7%9a%84%e6%9c%80%e4%bd%b3%e6%97%b6%e6%9c%ba">买卖股票的最佳时机</a></li>
+<li><a href="#%e4%b9%b0%e5%8d%96%e8%82%a1%e7%a5%a8%e7%9a%84%e6%9c%80%e4%bd%b3%e6%97%b6%e6%9c%ba-ii">买卖股票的最佳时机 II</a></li>
+<li><a href="#%e6%9c%80%e5%a4%a7%e5%ad%90%e6%95%b0%e7%bb%84">最大子数组</a></li>
+<li><a href="#%e4%b8%bb%e5%85%83%e7%b4%a0">主元素</a></li>
+<li><a href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%a4%84%e7%90%86">字符串处理</a></li>
+<li><a href="#%e7%94%9f%e6%88%90%e6%8b%ac%e5%8f%b7">生成括号</a></li>
+<li><a href="#excel%e8%a1%a8%e5%88%97%e6%a0%87%e9%a2%98">Excel表列标题</a></li>
+<li><a href="#%e7%bf%bb%e8%bd%ac%e6%b8%b8%e6%88%8f">翻转游戏</a></li>
+<li><a href="#%e7%bf%bb%e8%bd%ac%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%b8%ad%e7%9a%84%e5%8d%95%e8%af%8d">翻转字符串中的单词</a></li>
+<li><a href="#%e8%bd%ac%e6%8d%a2%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%88%b0%e6%95%b4%e6%95%b0">转换字符串到整数</a></li>
+<li><a href="#%e6%9c%80%e9%95%bf%e5%85%ac%e5%85%b1%e5%89%8d%e7%bc%80">最长公共前缀</a></li>
+<li><a href="#%e5%9b%9e%e6%96%87%e6%95%b0">回文数</a></li>
+<li><a href="#%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92">动态规划</a></li>
+<li><a href="#%e5%8d%95%e8%af%8d%e6%8b%86%e5%88%86">单词拆分</a></li>
+<li><a href="#%e7%88%ac%e6%a5%bc%e6%a2%af">爬楼梯</a></li>
+<li><a href="#%e6%89%93%e5%8a%ab%e6%88%bf%e5%b1%8b">打劫房屋</a></li>
+<li><a href="#%e7%bc%96%e8%be%91%e8%b7%9d%e7%a6%bb">编辑距离</a></li>
+<li><a href="#%e4%b9%98%e7%a7%af%e6%9c%80%e5%a4%a7%e5%ad%90%e5%ba%8f%e5%88%97">乘积最大子序列</a></li>
+<li><a href="#%e7%9f%a9%e9%98%b5">矩阵</a></li>
+<li><a href="#%e8%9e%ba%e6%97%8b%e7%9f%a9%e9%98%b5">螺旋矩阵</a></li>
+<li><a href="#%e5%88%a4%e6%96%ad%e6%95%b0%e7%8b%ac%e6%98%af%e5%90%a6%e5%90%88%e6%b3%95">判断数独是否合法</a></li>
+<li><a href="#%e6%97%8b%e8%bd%ac%e5%9b%be%e5%83%8f">旋转图像</a></li>
+<li><a href="#%e4%ba%8c%e8%bf%9b%e5%88%b6--%e4%bd%8d%e8%bf%90%e7%ae%97">二进制 / 位运算</a></li>
+<li><a href="#%e8%90%bd%e5%8d%95%e7%9a%84%e6%95%b0">落单的数</a></li>
+<li><a href="#%e6%a0%bc%e9%9b%b7%e7%bc%96%e7%a0%81">格雷编码</a></li>
+<li><a href="#%e5%85%b6%e4%bb%96">其他</a></li>
+<li><a href="#%e5%8f%8d%e8%bd%ac%e6%95%b4%e6%95%b0">反转整数</a></li>
+<li><a href="#lru%e7%bc%93%e5%ad%98%e7%ad%96%e7%95%a5">LRU缓存策略</a></li>
+</ul>
+<h1 id="_1">排序</h1>
+<h2 id="_2">比较排序</h2>
+<h3 id="_3">冒泡排序</h3>
+<p>重复地走访过要排序的数列，每次比较相邻两个元素，如果它们的顺序错误就把它们交换过来，越大的元素会经由交换慢慢“浮”到数列的尾端。</p>
+<pre><code class="language-java">public void bubbleSort(int[] arr) {
+    int temp = 0;
+    boolean swap;
+    for (int i = arr.length - 1; i &gt; 0; i--) { // 每次需要排序的长度
+        // 增加一个swap的标志，当前一轮没有进行交换时，说明数组已经有序
+        swap = false;
+        for (int j = 0; j &lt; i; j++) { // 从第一个元素到第i个元素
+            if (arr[j] &gt; arr[j + 1]) {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swap = true;
+            }
+        }
+        if (!swap){
+            break;
+        }
+    }
+}
+</code></pre>
+<h3 id="_4">归并排序</h3>
+<p>分解待排序的数组成两个各具 n/2 个元素的子数组，递归调用归并排序两个子数组，合并两个已排序的子数组成一个已排序的数组。</p>
+<pre><code class="language-java">public void mergeSort(int[] arr) {
+    int[] temp = new int[arr.length];
+    internalMergeSort(arr, temp, 0, arr.length - 1);
+}
+
+private void internalMergeSort(int[] arr, int[] temp, int left, int right) {
+    // 当left == right时，不需要再划分
+    if (left &lt; right) {
+        int mid = (left + right) / 2;
+        internalMergeSort(arr, temp, left, mid);
+        internalMergeSort(arr, temp, mid + 1, right);
+        mergeSortedArray(arr, temp, left, mid, right);
+    }
+}
+
+// 合并两个有序子序列
+public void mergeSortedArray(int[] arr, int[] temp, int left, int mid, int right) {
+    int i = left;
+    int j = mid + 1;
+    int k = 0;
+    while (i &lt;= mid &amp;&amp; j &lt;= right) {
+        temp[k++] = arr[i] &lt; arr[j] ? arr[i++] : arr[j++];
+    }
+    while (i &lt;= mid) {
+        temp[k++] = arr[i++];
+    }
+    while (j &lt;= right) {
+        temp[k++] = arr[j++];
+    }
+    // 把temp数据复制回原数组
+    for (i = 0; i &lt; k; i++) {
+        arr[left + i] = temp[i];
+    }
+}
+</code></pre>
+<h3 id="_5">快速排序</h3>
+<p>在待排序的数组选取一个元素作为基准，将待排序的元素进行分区，比基准元素大的元素放在一边，比其小的放另一边，递归调用快速排序对两边的元素排序。选取基准元素并分区的过程采用双指针左右交换。</p>
+<pre><code class="language-java">public void quickSort(int[] arr){
+    quickSort(arr, 0, arr.length-1);
+}
+
+private void quickSort(int[] arr, int low, int high){
+    if (low &gt;= high)
+        return;
+    int pivot = partition(arr, low, high);        //将数组分为两部分
+    quickSort(arr, low, pivot - 1);                   //递归排序左子数组
+    quickSort(arr, pivot + 1, high);                  //递归排序右子数组
+}
+
+private int partition(int[] arr, int low, int high){
+    int pivot = arr[low];     //基准
+    while (low &lt; high){
+        while (low &lt; high &amp;&amp; arr[high] &gt;= pivot) {
+            high--;
+        }
+        arr[low] = arr[high];             //交换比基准大的记录到左端
+        while (low &lt; high &amp;&amp; arr[low] &lt;= pivot) {
+            low++;
+        }
+        arr[high] = arr[low];           //交换比基准小的记录到右端
+    }
+    //扫描完成，基准到位
+    arr[low] = pivot;
+    //返回的是基准的位置
+    return low;
+}
+</code></pre>
+<h2 id="_6">线性排序</h2>
+<h3 id="_7">计数排序</h3>
+<p>根据待排序的数组中最大和最小的元素，统计数组中每个值为i的元素出现的次数，存入数组C的第i项，对所有的计数累加，然后反向填充目标数组。</p>
+<pre><code class="language-java">public void countSort(int[] arr) {
+    int max = Integer.MIN_VALUE;
+    int min = Integer.MAX_VALUE;
+    for(int i = 0; i &lt; arr.length; i++){
+        max = Math.max(max, arr[i]);
+        min = Math.min(min, arr[i]);
+    }
+
+    int[] b = new int[arr.length]; // 存储数组
+    int[] count = new int[max - min + 1]; // 计数数组
+
+    for (int num = min; num &lt;= max; num++) {
+        // 初始化各元素值为0，数组下标从0开始因此减min
+        count[num - min] = 0;
+    }
+
+    for (int i = 0; i &lt; arr.length; i++) {
+        int num = arr[i];
+        count[num - min]++; // 每出现一个值，计数数组对应元素的值+1
+        // 此时count[i]表示数值等于i的元素的个数
+    }
+
+    for (int i = min + 1; i &lt;= max; i++) {
+        count[i - min] += count[i - min - 1];
+        // 此时count[i]表示数值&lt;=i的元素的个数
+    }
+
+    for (int i = 0; i &lt; arr.length; i++) {
+            int num = arr[i]; // 原数组第i位的值
+            int index = count[num - min] - 1; //加总数组中对应元素的下标
+            b[index] = num; // 将该值存入存储数组对应下标中
+            count[num - min]--; // 加总数组中，该值的总和减少1。
+    }
+
+    // 将存储数组的值替换给原数组
+    for(int i=0; i &lt; arr.length;i++){
+        arr[i] = b[i];
+    }
+}
+</code></pre>
+<h3 id="_8">桶排序</h3>
+<p>找出待排序数组中的最大值max、最小值min，数组ArrayList作为桶，桶里放的元素用ArrayList存储。计算每个元素 arr[i] 放的桶，每个桶各自排序，遍历桶数组，把排序好的元素放进输出数组。</p>
+<pre><code class="language-java">public static void bucketSort(int[] arr){
+    int max = Integer.MIN_VALUE;
+    int min = Integer.MAX_VALUE;
+    for(int i = 0; i &lt; arr.length; i++){
+        max = Math.max(max, arr[i]);
+        min = Math.min(min, arr[i]);
+    }
+    // 桶数
+    int bucketNum = (max - min) / arr.length + 1;
+    ArrayList&lt;ArrayList&lt;Integer&gt;&gt; bucketArr = new ArrayList&lt;&gt;(bucketNum);
+    for(int i = 0; i &lt; bucketNum; i++){
+        bucketArr.add(new ArrayList&lt;Integer&gt;());
+    }
+    // 将每个元素放入桶
+    for(int i = 0; i &lt; arr.length; i++){
+        int num = (arr[i] - min) / (arr.length);
+        bucketArr.get(num).add(arr[i]);
+    }
+    // 对每个桶进行排序
+    for(int i = 0; i &lt; bucketArr.size(); i++){
+        Collections.sort(bucketArr.get(i));
+        for (int j = 0; j &lt; bucketArr.get(i).size(); j++) {
+            arr[j] = bucketArr.get(i).get(j);
+        }
+    }
+}
+</code></pre>
+<h1 id="_9">二叉树</h1>
+<pre><code class="language-java">class TreeNode {
+    public TreeNode left, right;
+    public int val;
+
+    public TreeNode(int val) {
+        this.val = val;
+    }
+}
+</code></pre>
+<h2 id="_10">顺序遍历</h2>
+<p>先序遍历: 根-&gt;左-&gt;右<br />
+中序遍历: 左-&gt;根-&gt;右<br />
+后序遍历: 左-&gt;右-&gt;根</p>
+<pre><code class="language-java">// 先序遍历
+public void preTraverse(TreeNode root) {
+    if (root != null) {
+        System.out.println(root.val);
+        preTraverse(root.left);
+        preTraverse(root.right);
+    }
+}
+
+// 中序遍历
+public void inTraverse(TreeNode root) {
+    if (root != null) {
+        inTraverse(root.left);
+        System.out.println(root.val);
+        inTraverse(root.right);
+    }
+}
+
+// 后序遍历
+public void postTraverse(TreeNode root) {
+    if (root != null) {
+        postTraverse(root.left);
+        postTraverse(root.right);
+        System.out.println(root.val);
+    }
+}
+</code></pre>
+<h2 id="_11">层次遍历</h2>
+<pre><code class="language-java">// 层次遍历(DFS)
+public static List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) {
+    List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+    if (root == null) {
+        return res;
+    }
+
+    dfs(root, res, 0);
+    return res;
+}
+
+private void dfs(TreeNode root, List&lt;List&lt;Integer&gt;&gt; res, int level) {
+    if (root == null) {
+        return;
+    }
+    if (level == res.size()) {
+        res.add(new ArrayList&lt;&gt;());
+    }
+    res.get(level).add(root.val);
+
+    dfs(root.left, res, level + 1);
+    dfs(root.right, res, level + 1);
+}
+
+// 层次遍历(BFS)
+public List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) {
+    List result = new ArrayList();
+
+    if (root == null) {
+        return result;
+    }
+
+    Queue&lt;TreeNode&gt; queue = new LinkedList&lt;TreeNode&gt;();
+    queue.offer(root);
+
+    while (!queue.isEmpty()) {
+        ArrayList&lt;Integer&gt; level = new ArrayList&lt;Integer&gt;();
+        int size = queue.size();
+        for (int i = 0; i &lt; size; i++) {
+            TreeNode head = queue.poll();
+            level.add(head.val);
+            if (head.left != null) {
+                queue.offer(head.left);
+            }
+            if (head.right != null) {
+                queue.offer(head.right);
+            }
+        }
+        result.add(level);
+    }
+
+    return result;
+}
+
+// &quot;Z&quot;字遍历
+public List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) {
+    List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
+
+    if (root == null){
+        return result;
+    }
+
+    Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;();
+    queue.offer(root);
+    boolean isFromLeft = false;
+    while(!queue.isEmpty()){
+        int size = queue.size();
+        isFromLeft = !isFromLeft;
+        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+        for(int i = 0; i &lt; size; i++){
+            TreeNode node;
+            if (isFromLeft){
+                node = queue.pollFirst();
+            }else{
+                node = queue.pollLast();
+            }
+            list.add(node.val);
+
+            if (isFromLeft){
+                if (node.left != null){
+                    queue.offerLast(node.left);
+                }
+                if (node.right != null){
+                    queue.offerLast(node.right);
+                }
+            }else{
+                if (node.right != null){
+                    queue.offerFirst(node.right);
+                }
+                if (node.left != null){
+                    queue.offerFirst(node.left);
+                }
+            }
+        }
+        result.add(list);
+    }
+
+    return result;
+}
+</code></pre>
+<h2 id="_12">左右翻转</h2>
+<pre><code class="language-java">public void invert(TreeNode root) {
+    if (root == null) {
+        return;
+    }
+    TreeNode temp = root.left;
+    root.left = root.right;
+    root.right = temp;
+
+    invert(root.left);
+    invert(root.right);
+}
+</code></pre>
+<h2 id="_13">最大值</h2>
+<pre><code class="language-java">public int getMax(TreeNode root) {
+    if (root == null) {
+        return Integer.MIN_VALUE;
+    } else {
+        int left = getMax(root.left);
+        int right = getMax(root.right);
+        return Math.max(Math.max(left, rigth), root.val);
+    }
+}
+</code></pre>
+<h2 id="_14">最大深度</h2>
+<pre><code class="language-java">public int maxDepth(TreeNode root) {
+    if (root == null) {
+        return 0;
+    }
+
+    int left = maxDepth(root.left);
+    int right = maxDepth(root.right);
+    return Math.max(left, right) + 1;
+}
+</code></pre>
+<h2 id="_15">最小深度</h2>
+<pre><code class="language-java">public int minDepth(TreeNode root) {
+    if (root == null) {
+        return 0;
+    }
+
+    int left = minDepth(root.left);
+    int right = minDepth(root.right);
+
+    if (left == 0) {
+        return right + 1;
+    } else if (right == 0) {
+        return left + 1;
+    } else {
+        return Math.min(left, right) + 1;
+    }
+}
+</code></pre>
+<h2 id="_16">平衡二叉树</h2>
+<blockquote>
+<p>平衡二叉树每一个节点的左右两个子树的高度差不超过1</p>
+</blockquote>
+<pre><code class="language-java">public boolean isBalanced(TreeNode root) {
+    return maxDepth(root) != -1;
+}
+
+private int maxDepth(TreeNode root) {
+    if (root == null) {
+        return 0;
+    }
+
+    int left = maxDepth(root.left);
+    int right = maxDepth(root.right);
+    if (left == -1 || right == -1 || Math.abs(left - right) &gt; 1) {
+        return -1;
+    }
+    return Math.max(left, right) + 1;
+}
+</code></pre>
+<h1 id="_17">链表</h1>
+<pre><code class="language-java">public class ListNode {
+     int val;
+     ListNode next;
+     ListNode(int x) {
+         val = x;
+         next = null;
+    }
+}
+</code></pre>
+<h2 id="_18">删除节点</h2>
+<pre><code class="language-java">public void deleteNode(ListNode node) {
+    if (node.next == null){
+        node = null;
+        return;
+    }
+    // 取缔下一节点
+    node.val = node.next.val
+    node.next = node.next.next
+}
+</code></pre>
+<h2 id="_19">翻转链表</h2>
+<pre><code class="language-java">public ListNode reverse(ListNode head) {
+    //prev表示前继节点
+    ListNode prev = null;
+    while (head != null) {
+        //temp记录下一个节点，head是当前节点
+        ListNode temp = head.next;
+        head.next = prev;
+        prev = head;
+        head = temp;
+    }
+    return prev;
+}
+</code></pre>
+<h2 id="_20">中间元素</h2>
+<pre><code class="language-java">public ListNode findMiddle(ListNode head){
+    if(head == null){
+        return null;
+    }
+
+    ListNode slow = head;
+    ListNode fast = head;
+
+    // fast.next = null 表示 fast 是链表的尾节点
+    while(fast != null &amp;&amp; fast.next != null){
+        fast = fast.next.next;
+        slow = slow.next;
+    }
+    return slow;
+}
+</code></pre>
+<h2 id="_21">判断是否为循环链表</h2>
+<pre><code class="language-java">public Boolean hasCycle(ListNode head) {
+    if (head == null || head.next == null) {
+        return false;
+    }
+
+    ListNode slow = head;
+    ListNode fast = head.next;
+
+    while (fast != slow) {
+        if(fast == null || fast.next == null) {
+            return false;
+        }
+        fast = fast.next.next;
+        slow = slow.next;
+    } 
+    return true;
+}
+</code></pre>
+<h2 id="_22">合并两个已排序链表</h2>
+<pre><code class="language-java">public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    ListNode dummy = new ListNode(0);
+    ListNode lastNode = dummy;
+
+    while (l1 != null &amp;&amp; l2 != null) {
+        if (l1.val &lt; l2.val) {
+            lastNode.next = l1;
+            l1 = l1.next;
+        } else {
+            lastNode.next = l2;
+            l2 = l2.next;
+        }
+        lastNode = lastNode.next;
+    }
+
+    if (l1 != null) {
+        lastNode.next = l1;
+    } else {
+        lastNode.next = l2;
+    }
+
+    return dummy.next;
+}
+</code></pre>
+<h2 id="_23">链表排序</h2>
+<p>可利用归并、快排等算法实现</p>
+<pre><code class="language-java">// 归并排序
+public ListNode sortList(ListNode head) {
+    if (head == null || head.next == null) {
+        return head;
+    }
+
+    ListNode mid = findMiddle(head);
+
+    ListNode right = sortList(mid.next);
+    mid.next = null;
+    ListNode left = sortList(head);
+
+    return mergeTwoLists(left, right);
+}
+
+// 快速排序
+public ListNode sortList(ListNode head) {
+    quickSort(head, null);
+    return head;
+}
+
+private void quickSort(ListNode start, ListNode end) {
+    if (start == end) {
+        return;
+    }
+
+    ListNode pt = partition(start, end);
+    quickSort(start, pt);
+    quickSort(pt.next, end);
+}
+
+private ListNode partition(ListNode start, ListNode end) {
+    int pivotKey = start.val;
+    ListNode p1 = start, p2 = start.next;
+    while (p2 != end) {
+        if (p2.val &lt; pivotKey) {
+            p1 = p1.next;
+            swapValue(p1, p2);
+        }
+        p2 = p2.next;
+    }
+
+    swapValue(start, p1);
+    return p1;
+}
+
+private void swapValue(ListNode node1, ListNode node2) {
+    int tmp = node1.val;
+    node1.val = node2.val;
+    node2.val = tmp;
+}
+</code></pre>
+<h2 id="n">删除倒数第N个节点</h2>
+<pre><code class="language-java">public ListNode removeNthFromEnd(ListNode head, int n) {
+    if (n &lt;= 0) {
+        return null;
+    }
+
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
+
+    ListNode preDelete = dummy;
+    for (int i = 0; i &lt; n; i++) {
+        if (head == null) {
+            return null;
+        }
+        head = head.next;
+    }
+    // 此时head为正数第N个节点
+    while (head != null) {
+        head = head.next;
+        preDelete = preDelete.next;
+    }
+    preDelete.next = preDelete.next.next;
+    return dummy.next;
+}
+</code></pre>
+<h2 id="_24">两个链表是否相交</h2>
+<pre><code class="language-java">public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    if (headA == null || headB == null) {
+        return null;
+    }
+
+    ListNode currA = headA;
+    ListNode currB = headB;
+    int lengthA = 0;
+    int lengthB = 0;
+
+    // 让长的先走到剩余长度和短的一样
+    while (currA != null) {
+        currA = currA.next;
+        lengthA++;
+    }
+    while (currB != null) {
+        currB = currB.next;
+        lengthB++;
+    }
+
+    currA = headA;
+    currB = headB;
+    while (lengthA &gt; lengthB) {
+        currA = currA.next;
+        lengthA--;
+    }
+    while (lengthB &gt; lengthA) {
+        currB = currB.next;
+        lengthB--;
+    }
+
+    // 然后同时走到第一个相同的地方
+    while (currA != currB) {
+        currA = currA.next;
+        currB = currB.next;
+    }
+    // 返回交叉开始的节点
+    return currA;
+}
+</code></pre>
+<h1 id="_25">栈 / 队列</h1>
+<h2 id="_26">带最小值操作的栈</h2>
+<blockquote>
+<p>实现一个栈, 额外支持一个操作：min() 返回栈中元素的最小值</p>
+</blockquote>
+<pre><code class="language-java">public class MinStack {
+    private Stack&lt;Integer&gt; stack;
+    private Stack&lt;Integer&gt; minStack; // 维护一个辅助栈，传入当前栈的最小值
+
+    public MinStack() {
+        stack = new Stack&lt;Integer&gt;();
+        minStack = new Stack&lt;Integer&gt;();
+    }
+
+    public void push(int number) {
+        stack.push(number);
+        if (minStack.isEmpty()) {
+            minStack.push(number);
+        } else {
+            minStack.push(Math.min(number, minStack.peek()));
+        }
+    }
+
+    public int pop() {
+        minStack.pop();
+        return stack.pop();
+    }
+
+    public int min() {
+        return minStack.peek();
+    }
+}
+</code></pre>
+<h2 id="_27">有效括号</h2>
+<blockquote>
+<p>给定一个字符串所表示的括号序列，包含以下字符： '(', ')', '{', '}', '[' and ']'， 判定是否是有效的括号序列。括号必须依照 "()" 顺序表示， "()[]{}" 是有效的括号，但 "([)]" 则是无效的括号。</p>
+</blockquote>
+<pre><code class="language-java">public boolean isValidParentheses(String s) {
+    Stack&lt;Character&gt; stack = new Stack&lt;Character&gt;();
+    for (Character c : s.toCharArray()) {
+        if (&quot;({[&quot;.contains(String.valueOf(c))) {
+            stack.push(c);
+        } else {
+            if (!stack.isEmpty() &amp;&amp; isValid(stack.peek(), c)) {
+                stack.pop();
+            } else {
+                return false;
+            }
+        }
+    }
+    return stack.isEmpty();
+}
+
+private boolean isValid(char c1, char c2) {
+    return (c1 == '(' &amp;&amp; c2 == ')') || (c1 == '{' &amp;&amp; c2 == '}')
+        || (c1 == '[' &amp;&amp; c2 == ']');
+}
+</code></pre>
+<h2 id="_28">用栈实现队列</h2>
+<pre><code class="language-java">public class MyQueue {
+    private Stack&lt;Integer&gt; outStack;
+    private Stack&lt;Integer&gt; inStack;
+
+    public MyQueue() {
+       outStack = new Stack&lt;Integer&gt;();
+       inStack = new Stack&lt;Integer&gt;();
+    }
+
+    private void in2OutStack(){
+        while(!inStack.isEmpty()){
+            outStack.push(inStack.pop());
+        }
+    }
+
+    public void push(int element) {
+        inStack.push(element);
+    }
+
+    public int pop() {
+        if(outStack.isEmpty()){
+            this.in2OutStack();
+        }
+        return outStack.pop();
+    }
+
+    public int top() {
+        if(outStack.isEmpty()){
+            this.in2OutStack();
+        }
+        return outStack.peek();
+    }
+}
+</code></pre>
+<h2 id="_29">逆波兰表达式求值</h2>
+<blockquote>
+<p>在反向波兰表示法中计算算术表达式的值, ["2", "1", "+", "3", "*"] -&gt; (2 + 1) * 3 -&gt; 9</p>
+</blockquote>
+<pre><code class="language-java">public int evalRPN(String[] tokens) {
+    Stack&lt;Integer&gt; s = new Stack&lt;Integer&gt;();
+    String operators = &quot;+-*/&quot;;
+    for (String token : tokens) {
+        if (!operators.contains(token)) {
+            s.push(Integer.valueOf(token));
+            continue;
+        }
+
+        int a = s.pop();
+        int b = s.pop();
+        if (token.equals(&quot;+&quot;)) {
+            s.push(b + a);
+        } else if(token.equals(&quot;-&quot;)) {
+            s.push(b - a);
+        } else if(token.equals(&quot;*&quot;)) {
+            s.push(b * a);
+        } else {
+            s.push(b / a);
+        }
+    }
+    return s.pop();
+}
+</code></pre>
+<h1 id="_30">二分</h1>
+<h2 id="_31">二分搜索</h2>
+<pre><code class="language-java">public int binarySearch(int[] arr, int start, int end, int hkey){
+    if (start &gt; end) {
+        return -1;
+    }
+
+    int mid = start + (end - start) / 2;    //防止溢位
+    if (arr[mid] &gt; hkey) {
+        return binarySearch(arr, start, mid - 1, hkey);
+    }
+    if (arr[mid] &lt; hkey) {
+        return binarySearch(arr, mid + 1, end, hkey);
+    } 
+    return mid;  
+}
+</code></pre>
+<h2 id="x">X的平方根</h2>
+<pre><code class="language-java">public int sqrt(int x) {
+    if (x &lt; 0)  {
+        throw new IllegalArgumentException();
+    } else if (x &lt;= 1) {
+        return x;
+    }
+
+    int start = 1, end = x;
+    // 直接对答案可能存在的区间进行二分 =&gt; 二分答案
+    while (start + 1 &lt; end) {
+        int mid = start + (end - start) / 2;
+        if (mid == x / mid) {
+            return mid;
+        }  else if (mid &lt; x / mid) {
+            start = mid;
+        } else {
+            end = mid;
+        }  
+    }
+    if (end &gt; x / end) {
+        return start;
+    }
+    return end;
+}
+</code></pre>
+<h1 id="_32">哈希表</h1>
+<h2 id="_33">两数之和</h2>
+<blockquote>
+<p>给一个整数数组，找到两个数使得他们的和等于一个给定的数 target。需要实现的函数twoSum需要返回这两个数的下标。</p>
+</blockquote>
+<p>用一个hashmap来记录，key记录target-numbers[i]的值，value记录numbers[i]的i的值，如果碰到一个
+numbers[j]在hashmap中存在，那么说明前面的某个numbers[i]和numbers[j]的和为target，i和j即为答案</p>
+<pre><code class="language-java">public int[] twoSum(int[] numbers, int target) {
+
+    HashMap&lt;Integer,Integer&gt; map = new HashMap&lt;&gt;();
+
+    for (int i = 0; i &lt; numbers.length; i++) {
+        if (map.containsKey(numbers[i])) {
+            return new int[]{map.get(numbers[i]), i};
+        }
+        map.put(target - numbers[i], i);
+    }
+
+    return new int[]{};
+}
+</code></pre>
+<h2 id="_34">连续数组</h2>
+<blockquote>
+<p>给一个二进制数组，找到 0 和 1 数量相等的子数组的最大长度</p>
+</blockquote>
+<p>使用一个数字sum维护到i为止1的数量与0的数量的差值。在loop i的同时维护sum并将其插入hashmap中。对于某一个sum值，若hashmap中已有这个值，则当前的i与sum上一次出现的位置之间的序列0的数量与1的数量相同。</p>
+<pre><code class="language-java">public int findMaxLength(int[] nums) {
+    Map&lt;Integer, Integer&gt; prefix = new HashMap&lt;&gt;();
+    int sum = 0;
+    int max = 0;
+    prefix.put(0, -1); // 当第一个0 1数量相等的情况出现时，数组下标减去-1得到正确的长度
+    for (int i = 0; i &lt; nums.length; i++) {
+        int num = nums[i];
+        if (num == 0) {
+            sum--;
+        } else {
+            sum++;
+        }
+
+        if (prefix.containsKey(sum)) {
+            max = Math.max(max, i - prefix.get(sum));
+        } else {
+            prefix.put(sum, i);
+        }
+    }
+
+    return max;
+}
+</code></pre>
+<h2 id="_35">最长无重复字符的子串</h2>
+<p>用HashMap记录每一个字母出现的位置。设定一个左边界, 到当前枚举到的位置之间的字符串为不含重复字符的子串。若新碰到的字符的上一次的位置在左边界右边, 则需要向右移动左边界</p>
+<pre><code class="language-java">public int lengthOfLongestSubstring(String s) {
+    if (s == null || s.length() == 0) {
+        return 0;
+    }
+    HashMap&lt;Character, Integer&gt; map = new HashMap&lt;&gt;();
+    int max = Integer.MIN_VALUE;
+    int start = -1; // 计算无重复字符子串开始的位置
+    int current = 0;
+    for (int i = 0; i &lt; s.length(); i++) {
+        if (map.containsKey(s.charAt(i))) {
+            int tmp = map.get(s.charAt(i));
+            if (tmp &gt;= start) { // 上一次的位置在左边界右边, 则需要向右移动左边界
+                start = tmp;
+            }
+        } 
+
+        map.put(s.charAt(i), i);
+        max = Math.max(max, i - start);
+    }
+    return max;
+}
+</code></pre>
+<h2 id="_36">最多点在一条直线上</h2>
+<blockquote>
+<p>给出二维平面上的n个点，求最多有多少点在同一条直线上</p>
+</blockquote>
+<pre><code class="language-java">class Point {
+    int x;
+    int y;
+    Point() { 
+        x = 0; y = 0; 
+    }
+    Point(int a, int b) { 
+        x = a; y = b; 
+    }
+}
+</code></pre>
+<p>通过HashMap记录下两个点之间的斜率相同出现的次数，注意考虑点重合的情况</p>
+<pre><code class="language-java">public int maxPoints(Point[] points) {
+    if (points == null) {
+        return 0;
+    }
+
+    int max = 0;
+    for (int i = 0; i &lt; points.length; i++) {
+        Map&lt;Double, Integer&gt; map = new HashMap&lt;&gt;();
+        int maxPoints = 0;
+        int overlap = 0;
+        for (int j = i + 1; j &lt; points.length; j++) {
+            if (points[i].x == points[j].x &amp;&amp; points[i].y == points[j].y) {
+                overlap++; // 两个点重合的情况记录下来
+                continue;
+            }
+            double rate = (double)(points[i].y - points[j].y) / (points[i].x - points[j].x);
+            if (map.containsKey(rate)) {
+                map.put(rate, map.get(rate) + 1);
+            } else {
+                map.put(rate, 2);
+            }
+            maxPoints = Math.max(maxPoints, map.get(rate));
+        }
+        if (maxPoints == 0) maxPoints = 1;
+        max = Math.max(max, maxPoints + overlap);
+    }
+    return max;
+}
+</code></pre>
+<h1 id="_37">堆 / 优先队列</h1>
+<h2 id="k">前K大的数</h2>
+<pre><code class="language-java">// 维护一个 PriorityQueue，以返回前K的数
+public int[] topk(int[] nums, int k) {
+    int[] result = new int[k];
+    if (nums == null || nums.length &lt; k) {
+        return result;
+    }
+
+    Queue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;();
+    for (int num : nums) {
+        pq.add(num);
+        if (pq.size() &gt; k) {
+            pq.poll();
+        }
+    }
+
+    for (int i = k - 1; i &gt;= 0; i--) {
+        result[i] = pq.poll(); 
+    }
+
+    return result;
+}
+</code></pre>
+<h2 id="kii">前K大的数II</h2>
+<blockquote>
+<p>实现一个数据结构，提供下面两个接口：1.add(number) 添加一个元素  2.topk() 返回前K大的数</p>
+</blockquote>
+<pre><code class="language-java">public class Solution {
+    private int maxSize;
+    private Queue&lt;Integer&gt; minheap;
+    public Solution(int k) {
+        minheap = new PriorityQueue&lt;&gt;();
+        maxSize = k;
+    }
+
+    public void add(int num) {
+        if (minheap.size() &lt; maxSize) {
+            minheap.offer(num);
+            return;
+        }
+
+        if (num &gt; minheap.peek()) {
+            minheap.poll();
+            minheap.offer(num);
+        }
+    }
+
+    public List&lt;Integer&gt; topk() {
+        Iterator it = minheap.iterator();
+        List&lt;Integer&gt; result = new ArrayList&lt;Integer&gt;();
+        while (it.hasNext()) {
+            result.add((Integer) it.next());
+        }
+        Collections.sort(result, Collections.reverseOrder());
+        return result;
+    }
+}
+</code></pre>
+<h2 id="k_1">第K大的数</h2>
+<pre><code class="language-java">public int kthLargestElement(int k, int[] nums) {
+    if (nums == null || nums.length == 0 || k &lt; 1 || k &gt; nums.length){
+        return -1;
+    }
+    return partition(nums, 0, nums.length - 1, nums.length - k);
+}
+
+private int partition(int[] nums, int start, int end, int k) {
+    if (start &gt;= end) {
+        return nums[k];
+    }
+
+    int left = start, right = end;
+    int pivot = nums[(start + end) / 2];
+
+    while (left &lt;= right) {
+        while (left &lt;= right &amp;&amp; nums[left] &lt; pivot) {
+            left++;
+        }
+        while (left &lt;= right &amp;&amp; nums[right] &gt; pivot) {
+            right--;
+        }
+        if (left &lt;= right) {
+            swap(nums, left, right);
+            left++;
+            right--;
+        }
+    }
+
+    if (k &lt;= right) {
+        return partition(nums, start, right, k);
+    }
+    if (k &gt;= left) {
+        return partition(nums, left, end, k);
+    }
+    return nums[k];
+}    
+
+private void swap(int[] nums, int i, int j) {
+    int tmp = nums[i];
+    nums[i] = nums[j];
+    nums[j] = tmp;
+}
+</code></pre>
+<h1 id="_38">二叉搜索树</h1>
+<h2 id="_39">验证二叉搜索树</h2>
+<pre><code class="language-java">public boolean isValidBST(TreeNode root) {
+    return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
+}
+
+private boolean isValidBST(TreeNode root, long min, long max){
+    if (root == null) {
+        return true;
+    }
+
+    if (root.val &lt;= min || root.val &gt;= max){
+        return false;
+    }
+
+    return isValidBST(root.left, min, root.val) &amp;&amp; isValidBST(root.right, root.val, max);
+}
+</code></pre>
+<h2 id="k_2">第K小的元素</h2>
+<p>增加getCount方法来获取传入节点的子节点数（包括自己），从root节点开始判断k值和子节点数的大小决定递归路径是往左还是往右。</p>
+<pre><code class="language-java">public int kthSmallest(TreeNode root, int k) {
+    if (root == null) {
+        return 0;
+    }
+
+    int leftCount = getCount(root.left);
+    if (leftCount &gt;= k) {
+        return kthSmallest(root.left, k);
+    } else if (leftCount + 1 == k) {
+        return root.val;
+    } else {
+        return kthSmallest(root.right, k - leftCount - 1);
+    }
+}
+
+private int getCount(TreeNode root) {
+    if (root == null) {
+        return 0;
+    }
+
+    return getCount(root.left) + getCount(root.right) + 1;
+}
+</code></pre>
+<h1 id="_40">数组 / 双指针</h1>
+<h2 id="_41">加一</h2>
+<blockquote>
+<p>给定一个非负数，表示一个数字数组，在该数的基础上+1，返回一个新的数组。该数字按照数位高低进行排列，最高位的数在列表的最前面。</p>
+</blockquote>
+<pre><code class="language-java">public int[] plusOne(int[] digits) {
+    int carries = 1;
+    for(int i = digits.length - 1; i &gt;= 0 &amp;&amp; carries &gt; 0; i--){  
+        int sum = digits[i] + carries;
+        digits[i] = sum % 10;
+        carries = sum / 10;
+    }
+    if(carries == 0) {
+        return digits;
+    }
+
+    int[] rst = new int[digits.length + 1];
+    rst[0] = 1;
+    for(int i = 1; i &lt; rst.length; i++){
+        rst[i] = digits[i - 1];
+    }
+    return rst;
+}
+</code></pre>
+<h2 id="_42">删除元素</h2>
+<blockquote>
+<p>给定一个数组和一个值，在原地删除与值相同的数字，返回新数组的长度。</p>
+</blockquote>
+<pre><code class="language-java">public int removeElement(int[] A, int elem) {
+    if (A == null || A.length == 0) {
+        return 0;
+    }
+
+    int index = 0;
+    for (int i = 0; i &lt; A.length; i++) {
+        if (A[i] != elem) {
+            A[index++] = A[i];
+        } 
+    }
+
+    return index;
+}
+</code></pre>
+<h2 id="_43">删除排序数组中的重复数字</h2>
+<blockquote>
+<p>在原数组中“删除”重复出现的数字，使得每个元素只出现一次，并且返回“新”数组的长度。</p>
+</blockquote>
+<pre><code class="language-java">public int removeDuplicates(int[] A) {
+    if (A == null || A.length == 0) {
+        return 0;
+    }
+
+    int size = 0;
+    for (int i = 0; i &lt; A.length; i++) {
+        if (A[i] != A[size]) {
+            A[++size] = A[i];
+        }
+    }
+    return size + 1;
+}
+</code></pre>
+<h2 id="i">我的日程安排表 I</h2>
+<blockquote>
+<p>实现MyCalendar类来存储活动。如果新添加的活动没有重复，则可以添加。类将有方法book(int start，int end)。这代表左闭右开的间隔[start，end)有了预定，范围内的实数x，都满足start &lt;= x &lt; end，返回true。 否则，返回false，并且事件不会添加到日历中。</p>
+</blockquote>
+<p>TreeMap 是一个有序的key-value集合，它通过 <a href="http://www.cnblogs.com/skywang12345/p/3245399.html">红黑树</a> 实现，继承于AbstractMap，所以它是一个Map，即一个key-value集合。TreeMap可以查询小于等于某个值的最大的key，也可查询大于等于某个值的最小的key。
+元素的顺序可以改变，并且对新的数组不会有影响。</p>
+<pre><code class="language-java">class MyCalendar {
+    TreeMap&lt;Integer, Integer&gt; calendar;
+
+    MyCalendar() {
+        calendar = new TreeMap();
+    }
+
+    public boolean book(int start, int end) {
+        Integer previous = calendar.floorKey(start), next = calendar.ceilingKey(start);
+        if ((previous == null || calendar.get(previous) &lt;= start) &amp;&amp; (next == null || end &lt;= next)) {
+            calendar.put(start, end);
+            return true;
+        }
+        return false;
+    }
+}
+</code></pre>
+<h2 id="_44">合并排序数组</h2>
+<blockquote>
+<p>合并两个排序的整数数组A和B变成一个新的数组。可以假设A具有足够的空间去添加B中的元素。</p>
+</blockquote>
+<pre><code class="language-java">public void mergeSortedArray(int[] A, int m, int[] B, int n) {
+    int i = m - 1, j = n - 1, index = m + n - 1;
+    while (i &gt;= 0 &amp;&amp; j &gt;= 0) {
+        if (A[i] &gt; B[j]) {
+            A[index--] = A[i--];
+        } else {
+            A[index--] = B[j--];
+        }
+    }
+    while (i &gt;= 0) {
+        A[index--] = A[i--];
+    }
+    while (j &gt;= 0) {
+        A[index--] = B[j--];
+    }
+}
+</code></pre>
+<h1 id="_45">贪心</h1>
+<h2 id="_46">买卖股票的最佳时机</h2>
+<blockquote>
+<p>假设有一个数组，它的第i个元素是一支给定的股票在第i天的价格。如果你最多只允许完成一次交易(例如，一次买卖股票)，设计一个算法来找出最大利润。</p>
+</blockquote>
+<pre><code class="language-java">public int maxProfit(int[] prices) {
+    if (prices == null || prices.length == 0) {
+        return 0;
+    }
+
+    int min = Integer.MAX_VALUE;  //记录最低的价格
+    int profit = 0;
+    for (int price : prices) {
+        min = Math.min(price, min);
+        profit = Math.max(price - min, profit);
+    }
+
+    return profit;
+}
+</code></pre>
+<h2 id="ii">买卖股票的最佳时机 II</h2>
+<blockquote>
+<p>给定一个数组 prices 表示一支股票每天的价格。可以完成任意次数的交易, 不过不能同时参与多个交易，设计一个算法求出最大的利润。</p>
+</blockquote>
+<p>贪心：只要相邻的两天股票的价格是上升的, 我们就进行一次交易, 获得一定利润。</p>
+<pre><code class="language-java">public int maxProfit(int[] prices) {
+    int profit = 0;
+    for (int i = 0; i &lt; prices.length - 1; i++) {
+        int diff = prices[i + 1] - prices[i];
+        if (diff &gt; 0) {
+            profit += diff;
+        }
+    }
+    return profit;
+}
+</code></pre>
+<h2 id="_47">最大子数组</h2>
+<blockquote>
+<p>给定一个整数数组，找到一个具有最大和的子数组，返回其最大和。</p>
+</blockquote>
+<pre><code class="language-java">public int maxSubArray(int[] A) {
+    if (A == null || A.length == 0){
+        return 0;
+    }
+    //max记录全局最大值，sum记录区间和，如果当前sum&gt;0，那么可以继续和后面的数求和，否则就从0开始
+    int max = Integer.MIN_VALUE, sum = 0;
+    for (int i = 0; i &lt; A.length; i++) {
+        sum += A[i];
+        max = Math.max(max, sum);
+        sum = Math.max(sum, 0);
+    }
+
+    return max;
+}
+</code></pre>
+<h2 id="_48">主元素</h2>
+<p>给定一个整型数组，找出主元素，它在数组中的出现次数严格大于数组元素个数的二分之一(可以假设数组非空，且数组中总是存在主元素)。</p>
+<pre><code class="language-java">public int majorityNumber(List&lt;Integer&gt; nums) {
+    int currentMajor = 0;
+    int count = 0;
+
+    for(Integer num : nums) {
+        if(count == 0) {
+            currentMajor = num;
+        }
+
+        if(num == currentMajor) {
+            count++;
+        } else {
+            count--;
+        }
+    }
+    return currentMajor;
+}
+</code></pre>
+<h1 id="_49">字符串处理</h1>
+<h2 id="_50">生成括号</h2>
+<blockquote>
+<p>给定 n，表示有 n 对括号, 请写一个函数以将其生成所有的括号组合，并返回组合结果。</p>
+</blockquote>
+<pre><code class="language-java">public List&lt;String&gt; generateParenthesis(int n) {
+    List&lt;String&gt; res = new ArrayList&lt;&gt;();
+    helper(n, n, &quot;&quot;, res);
+    return res;
+}
+
+// DFS
+private void helper(int nL, int nR, String parenthesis, List&lt;String&gt; res) {
+    // nL 和 nR 分别代表左右括号剩余的数量
+    if (nL &lt; 0 || nR &lt; 0) {
+        return;
+    }
+
+    if (nL == 0 &amp;&amp; nR == 0) {
+        res.add(parenthesis);
+        return;
+    }
+    helper(nL - 1, nR, parenthesis + &quot;(&quot;, res);
+    if (nL &gt;= nR) {
+        return;
+    }
+    helper(nL, nR - 1, parenthesis + &quot;)&quot;, res);
+}
+</code></pre>
+<h2 id="excel">Excel表列标题</h2>
+<blockquote>
+<p>给定一个正整数，返回相应的列标题，如Excel表中所示。如1 -&gt; A，2 -&gt; B...26 -&gt; Z，27 -&gt; AA</p>
+</blockquote>
+<pre><code class="language-java">public String convertToTitle (int n) {
+    StringBuilder str = new StringBuilder();
+
+    while (n &gt; 0) {
+        n--;
+        str.append ( (char) ( (n % 26) + 'A'));
+        n /= 26;
+    }
+    return str.reverse().toString();
+}
+</code></pre>
+<h2 id="_51">翻转游戏</h2>
+<blockquote>
+<p>翻转游戏：给定一个只包含两种字符的字符串：+和-，你和你的小伙伴轮流翻转"++"变成"--"。当一个人无法采取行动时游戏结束，另一个人将是赢家。编写一个函数，计算字符串在一次有效移动后的所有可能状态。</p>
+</blockquote>
+<pre><code class="language-java">public List&lt;String&gt; generatePossibleNextMoves (String s) {
+    List list = new ArrayList();
+    for (int i = -1; (i = s.indexOf (&quot;++&quot;, i + 1)) &gt;= 0;) {
+        list.add (s.substring (0, i) + &quot;--&quot; + s.substring (i + 2));
+    }
+    return list;
+}
+</code></pre>
+<h2 id="_52">翻转字符串中的单词</h2>
+<blockquote>
+<p>给定一个字符串，逐个翻转字符串中的每个单词。</p>
+</blockquote>
+<pre><code class="language-java">public String reverseWords(String s) {
+    if(s.length() == 0 || s == null){
+        return &quot; &quot;;
+    }
+    //按照空格将s切分
+    String[] array = s.split(&quot; &quot;);
+    StringBuilder sb = new StringBuilder();
+    //从后往前遍历array，在sb中插入单词
+    for(int i = array.length - 1; i &gt;= 0; i--){
+        if(!array[i].equals(&quot;&quot;)) {
+            if (sb.length() &gt; 0) {
+                sb.append(&quot; &quot;);
+            }
+
+            sb.append(array[i]);
+        }
+    }
+    return sb.toString();
+}
+</code></pre>
+<h2 id="_53">转换字符串到整数</h2>
+<blockquote>
+<p>实现atoi这个函数，将一个字符串转换为整数。如果没有合法的整数，返回0。如果整数超出了32位整数的范围，返回INT_MAX(2147483647)如果是正整数，或者INT_MIN(-2147483648)如果是负整数。</p>
+</blockquote>
+<pre><code class="language-java">public int myAtoi(String str) {
+    if(str == null) {
+        return 0;
+    }
+    str = str.trim();
+    if (str.length() == 0) {
+        return 0;
+    }
+
+    int sign = 1;
+    int index = 0;
+
+    if (str.charAt(index) == '+') {
+        index++;
+    } else if (str.charAt(index) == '-') {
+        sign = -1;
+        index++;
+    }
+    long num = 0;
+    for (; index &lt; str.length(); index++) {
+        if (str.charAt(index) &lt; '0' || str.charAt(index) &gt; '9') {
+            break;
+        }
+        num = num * 10 + (str.charAt(index) - '0');
+        if (num &gt; Integer.MAX_VALUE ) {
+            break;
+        }
+    }   
+    if (num * sign &gt;= Integer.MAX_VALUE) {
+        return Integer.MAX_VALUE;
+    }
+    if (num * sign &lt;= Integer.MIN_VALUE) {
+        return Integer.MIN_VALUE;
+    }
+    return (int)num * sign;
+}
+</code></pre>
+<h2 id="_54">最长公共前缀</h2>
+<pre><code class="language-java">public String longestCommonPrefix(String[] strs) {
+    if (strs == null || strs.length == 0) {
+        return &quot;&quot;;
+    }
+    String prefix = strs[0];
+    for(int i = 1; i &lt; strs.length; i++) {
+        int j = 0;
+        while (j &lt; strs[i].length() &amp;&amp; j &lt; prefix.length() &amp;&amp; strs[i].charAt(j) == prefix.charAt(j)) {
+            j++;
+        }
+        if( j == 0) {
+            return &quot;&quot;;
+        }
+        prefix = prefix.substring(0, j);
+    }
+    return prefix;
+}
+</code></pre>
+<h2 id="_55">回文数</h2>
+<blockquote>
+<p>判断一个正整数是不是回文数。回文数的定义是，将这个数反转之后，得到的数仍然是同一个数。</p>
+</blockquote>
+<pre><code class="language-java">public boolean palindromeNumber(int num) {
+    // Write your code here
+    if(num &lt; 0){
+        return false;
+    }
+    int div = 1;
+    while(num / div &gt;= 10){
+        div *= 10;
+    }
+    while(num &gt; 0){
+        if(num / div != num % 10){
+            return false;
+        }
+        num = (num % div) / 10;
+        div /= 100;
+    }
+    return true;
+}
+</code></pre>
+<h1 id="_56">动态规划</h1>
+<h2 id="_57">单词拆分</h2>
+<blockquote>
+<p>给定字符串 s 和单词字典 dict，确定 s 是否可以分成一个或多个以空格分隔的子串，并且这些子串都在字典中存在。</p>
+</blockquote>
+<pre><code class="language-java">public boolean wordBreak(String s, Set&lt;String&gt; dict) {
+    // write your code here
+    int maxLength = getMaxLength(dict);
+
+    // 长度为n的单词 有n + 1个切割点 比如: _l_i_n_t_
+    boolean[] canBreak = new boolean[s.length() + 1];
+    // 当s长度为0时
+    canBreak[0] = true;
+
+    for(int i = 1; i &lt; canBreak.length; i++){
+        for(int j = 1; j &lt;= maxLength &amp;&amp; j &lt;= i; j++){
+            //i - j 表示从 i 点开始往前j个点的位置
+            String str = s.substring(i - j,i);
+            //如果此str在词典中 并且 str之前的 字符串可以拆分     
+            if(dict.contains(str) &amp;&amp; canBreak[i - j]){
+                canBreak[i] = true;
+                break;
+            }
+        }
+    }
+
+    return canBreak[canBreak.length - 1];
+}
+
+private int getMaxLength(Set&lt;String&gt; dict){
+    int max = 0;
+    for(String s : dict){
+        max = Math.max(max,s.length());
+    }
+    return max;
+}
+</code></pre>
+<h2 id="_58">爬楼梯</h2>
+<blockquote>
+<p>假设你正在爬楼梯，需要n步你才能到达顶部。但每次你只能爬一步或者两步，你能有多少种不同的方法爬到楼顶部？</p>
+</blockquote>
+<pre><code class="language-java">public int climbStairs(int n) {
+    if (n == 0) return 0;
+    int[] array = new int[n + 1];
+    array[0] = 1;
+    if (array.length &gt; 1) {
+        array[1] = 1;
+    }
+
+    for(int i = 2; i &lt; array.length; i++) {
+        array[i] = array[i - 1] + array[i - 2];
+    }
+    return array[n];
+}
+</code></pre>
+<h2 id="_59">打劫房屋</h2>
+<blockquote>
+<p>假设你是一个专业的窃贼，准备沿着一条街打劫房屋。每个房子都存放着特定金额的钱。你面临的唯一约束条件是：相邻的房子装着相互联系的防盗系统，且 当相邻的两个房子同一天被打劫时，该系统会自动报警。给定一个非负整数列表，表示每个房子中存放的钱， 算一算，如果今晚去打劫，在不触动报警装置的情况下, 你最多可以得到多少钱 。</p>
+</blockquote>
+<pre><code class="language-java">public long houseRobber(int[] A) {
+    if (A.length == 0) return 0;
+    long[] res = new long[A.length + 1];
+    res[0] = 0;
+    res[1] = A[0];
+    for (int i = 2; i &lt; res.length; i++) {
+        res[i] = Math.max(res[i - 2] + A[i - 1], res[i - 1]);
+    }
+    return res[A.length];
+}
+</code></pre>
+<h2 id="_60">编辑距离</h2>
+<blockquote>
+<p>给出两个单词word1和word2，计算出将word1 转换为word2的最少操作次数。你总共三种操作方法：插入一个字符、删除一个字符、替换一个字符。</p>
+</blockquote>
+<pre><code class="language-java">public int minDistance(String word1, String word2) {
+    // write your code here
+    int n = word1.length();
+    int m = word2.length();
+    int[][] dp = new int[n + 1][m + 1];
+    for (int i = 0; i &lt; n + 1; i++){
+        dp[i][0] = i;
+    }
+    for (int j = 0; j &lt; m + 1; j++){
+        dp[0][j] = j;
+    }
+    for (int i = 1; i&lt; n + 1; i++){
+        for (int j = 1; j &lt; m + 1; j++){
+            if (word1.charAt(i - 1) == word2.charAt(j - 1)){
+                dp[i][j] = dp[i - 1][j - 1];
+            } else {
+                dp[i][j] = 1 + Math.min(dp[i - 1][j - 1], Math.min(dp[i][j - 1], dp[i - 1][j]));
+            }
+        }
+    }
+    return  dp[n][m];
+}
+</code></pre>
+<h2 id="_61">乘积最大子序列</h2>
+<pre><code class="language-java">public int maxProduct(List&lt;Integer&gt; nums) {
+    // 分别记录正数最大值和负数最小值
+    int[] max = new int[nums.size()];
+    int[] min = new int[nums.size()];
+
+    min[0] = max[0] = nums.get(0);
+    int result = nums.get(0);
+    for (int i = 1; i &lt; nums.size(); i++) {
+        min[i] = max[i] = nums.get(i);
+        if (nums.get(i) &gt; 0) {
+            max[i] = Math.max(max[i], max[i - 1] * nums.get(i));
+            min[i] = Math.min(min[i], min[i - 1] * nums.get(i));
+        } else if (nums.get(i) &lt; 0) {
+            max[i] = Math.max(max[i], min[i - 1] * nums.get(i));
+            min[i] = Math.min(min[i], max[i - 1] * nums.get(i));
+        }
+
+        result = Math.max(result, max[i]);
+    }
+
+    return result;
+}
+</code></pre>
+<h1 id="_62">矩阵</h1>
+<h2 id="_63">螺旋矩阵</h2>
+<blockquote>
+<p>给定一个包含 m x n 个要素的矩阵，（m 行, n 列），按照螺旋顺序，返回该矩阵中的所有要素。</p>
+</blockquote>
+<pre><code class="language-java">public List&lt;Integer&gt; spiralOrder(int[][] matrix) {
+    ArrayList&lt;Integer&gt; rst = new ArrayList&lt;Integer&gt;();
+    if(matrix == null || matrix.length == 0) {
+        return rst;
+    }
+
+    int rows = matrix.length;
+    int cols = matrix[0].length;
+    int count = 0;
+    while(count * 2 &lt; rows &amp;&amp; count * 2 &lt; cols){
+        for (int i = count; i &lt; cols - count; i++) {
+            rst.add(matrix[count][i]);
+        }
+
+        for (int i = count + 1; i &lt; rows - count; i++) {
+            rst.add(matrix[i][cols - count - 1]);
+        }
+
+        if (rows - 2 * count == 1 || cols - 2 * count == 1) { // 如果只剩1行或1列
+            break;
+        }
+
+        for (int i = cols - count - 2; i &gt;= count; i--) {
+            rst.add(matrix[rows - count - 1][i]);
+        }
+
+        for (int i = rows - count - 2; i &gt;= count + 1; i--) {
+            rst.add(matrix[i][count]);
+        }
+
+        count++;
+    }
+    return rst;
+}
+</code></pre>
+<h2 id="_64">判断数独是否合法</h2>
+<blockquote>
+<p>请判定一个数独是否有效。该数独可能只填充了部分数字，其中缺少的数字用 . 表示。  </p>
+</blockquote>
+<p>维护一个HashSet用来记同一行、同一列、同一九宫格是否存在相同数字</p>
+<pre><code class="language-java">public boolean isValidSudoku(char[][] board) {
+    Set seen = new HashSet();
+    for (int i=0; i&lt;9; ++i) {
+        for (int j=0; j&lt;9; ++j) {
+            char number = board[i][j];
+            if (number != '.')
+                if (!seen.add(number + &quot; in row &quot; + i) ||
+                    !seen.add(number + &quot; in column &quot; + j) ||
+                    !seen.add(number + &quot; in block &quot; + i / 3 + &quot;-&quot; + j / 3))
+                    return false;
+        }
+    }
+    return true;
+}
+</code></pre>
+<h2 id="_65">旋转图像</h2>
+<blockquote>
+<p>给定一个N×N的二维矩阵表示图像，90度顺时针旋转图像。</p>
+</blockquote>
+<pre><code class="language-java">public void rotate(int[][] matrix) {
+    if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+        return;
+    }
+
+    int length = matrix.length;
+
+    for (int i = 0; i &lt; length / 2; i++) {
+        for (int j = 0; j &lt; (length + 1) / 2; j++){
+            int tmp = matrix[i][j];
+            matrix[i][j] = matrix[length - j - 1][i];
+            matrix[length -j - 1][i] = matrix[length - i - 1][length - j - 1];
+            matrix[length - i - 1][length - j - 1] = matrix[j][length - i - 1];
+            matrix[j][length - i - 1] = tmp;
+        }
+    }   
+}
+</code></pre>
+<h1 id="_66">二进制 / 位运算</h1>
+<h2 id="_67">落单的数</h2>
+<blockquote>
+<p>给出 2 * n + 1个数字，除其中一个数字之外其他每个数字均出现两次，找到这个数字。</p>
+</blockquote>
+<p>异或运算具有很好的性质，相同数字异或运算后为0，并且具有交换律和结合律，故将所有数字异或运算后即可得到只出现一次的数字。</p>
+<pre><code class="language-java">public int singleNumber(int[] A) {
+    if(A == null || A.length == 0) {
+        return -1;
+    }
+    int rst = 0;
+    for (int i = 0; i &lt; A.length; i++) {
+        rst ^= A[i];
+    }
+    return rst;
+}
+</code></pre>
+<h2 id="_68">格雷编码</h2>
+<blockquote>
+<p>格雷编码是一个二进制数字系统，在该系统中，两个连续的数值仅有一个二进制的差异。给定一个非负整数 n ，表示该代码中所有二进制的总数，请找出其格雷编码顺序。一个格雷编码顺序必须以 0 开始，并覆盖所有的 2n 个整数。例子——输入：2；输出：[0, 1, 3, 2]；解释: 0 - 00，1 - 01，3 - 11，2 - 10</p>
+</blockquote>
+<p>格雷码生成公式：G(i) = i ^ (i &gt;&gt; 2)</p>
+<pre><code class="language-java">public ArrayList&lt;Integer&gt; grayCode(int n) {
+    ArrayList&lt;Integer&gt; result = new ArrayList&lt;Integer&gt;();
+    for (int i = 0; i &lt; (1 &lt;&lt; n); i++) {
+        result.add(i ^ (i &gt;&gt; 1));
+    }
+    return result;
+}
+</code></pre>
+<h1 id="_69">其他</h1>
+<h2 id="_70">反转整数</h2>
+<blockquote>
+<p>将一个整数中的数字进行颠倒，当颠倒后的整数溢出时，返回 0 (标记为 32 位整数)。</p>
+</blockquote>
+<pre><code class="language-java">public int reverseInteger(int n) {
+    int reversed_n = 0;
+
+    while (n != 0) {
+        int temp = reversed_n * 10 + n % 10;
+        n = n / 10;
+        if (temp / 10 != reversed_n) {
+            reversed_n = 0;
+            break;
+        }
+        reversed_n = temp;
+    }
+    return reversed_n;
+}
+</code></pre>
+<h2 id="lru">LRU缓存策略</h2>
+<blockquote>
+<p>为最近最少使用（LRU）缓存策略设计一个数据结构，它应该支持以下操作：获取数据（get）和写入数据（set）。获取数据get(key)：如果缓存中存在key，则获取其数据值（通常是正数），否则返回-1。 写入数据set(key, value)：如果key还没有在缓存中，则写入其数据值。当缓存达到上限，它应该在写入新数据之前删除最近最少使用的数据用来腾出空闲位置。</p>
+</blockquote>
+<pre><code class="language-java">public class LRUCache {
+    private class Node{
+        Node prev;
+        Node next;
+        int key;
+        int value;
+
+        public Node(int key, int value) {
+            this.key = key;
+            this.value = value;
+            this.prev = null;
+            this.next = null;
+        }
+    }
+
+    private int capacity;
+    private HashMap&lt;Integer, Node&gt; hs = new HashMap&lt;Integer, Node&gt;();
+    private Node head = new Node(-1, -1);
+    private Node tail = new Node(-1, -1);
+
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        tail.prev = head;
+        head.next = tail;
+    }
+
+    public int get(int key) {
+        if( !hs.containsKey(key)) {         //key找不到
+            return -1;
+        }
+
+        // remove current
+        Node current = hs.get(key);
+        current.prev.next = current.next;
+        current.next.prev = current.prev;
+
+        // move current to tail
+        move_to_tail(current);          //每次get，使用次数+1，最近使用，放于尾部
+
+        return hs.get(key).value;
+    }
+
+    public void set(int key, int value) {           //数据放入缓存
+        // get 这个方法会把key挪到最末端，因此，不需要再调用 move_to_tail
+        if (get(key) != -1) {
+            hs.get(key).value = value;
+            return;
+        }
+
+        if (hs.size() == capacity) {        //超出缓存上限
+            hs.remove(head.next.key);       //删除头部数据
+            head.next = head.next.next;
+            head.next.prev = head;
+        }
+
+        Node insert = new Node(key, value);     //新建节点
+        hs.put(key, insert);
+        move_to_tail(insert);                   //放于尾部
+    }
+
+    private void move_to_tail(Node current) {    //移动数据至尾部
+        current.prev = tail.prev;
+        tail.prev = current;
+        current.prev.next = current;
+        current.next = tail;
+    }
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
